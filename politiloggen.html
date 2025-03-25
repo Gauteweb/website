@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauteweb.net -> Lag en Politiloggen Mastodon-Bot</title>
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hvordan lage en Politiloggen Bot til Mastodon?" />
+    <meta property="og:description" content="Her er en guide for hvordan du kan lage en Mastodon bot for det eller de politidistriktene du er interessert i på din instans." />
+    <meta property="og:image" content="https://gauteweb.net/images/arrestasjon.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/politiloggen.html" />
+
+</head>
+<body>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+      
+        <main>
+            <section>
+                <h2>Hvordan lage en Politiloggen Bot til Mastodon?</h2>
+                <p>Mange etterspør Bot’er for <a href="https://www.politiet.no/politiloggen/">Politiloggen</a> fra sitt distrikt. Jeg drifter en for Oslo Politidistrikt på Mikrobloggen.</p>
+                
+                    <img src="/images/arrestasjon.jpg" alt="Illustrasjon av en arrestasjon">
+
+                <p>Her har jeg laget en en guide på hvordan du kan lage en for det eller de distriktene du er interessert i på din instans.<p>
+                
+                <p>Forutsetning: Jeg bruker IFTTT i dette eksempelet og generelt når jeg lager Bot’er for Mastodon-bruk. Dette fordi det er enkelt og stabilt, men det krever et Pro-abonnement hos IFTTT.com som koster rundt 350 kroner i året. Jeg har sett på andre alternativer, men kommet frem til at med mindre jeg skal prøve å hoste en Bot selv på en Raspberry Pi her hjemme, så er dette den rimeligste, og helt klart enkleste måten å lage bot’er for Mastodon på.</p>
+
+                <h2>Steg 1: Lag en mastodon app</h2>
+                <p>Først oppretter du en vanlig Mastodon-bruker på den instansen du vil kjøre bot’en fra (sjekk at det er lov med Bot’er på instansen først). Så under instillinger, profil og annet så huker du av for at det er en automatisert konto:</p>
+                <img src="images/Automatisert_konto.png" alt="skjermbilde">
+                
+                <p>Dette gjør ingenting annet enn å vise følgere at dette er en Bot, ikke en vanlig bruker.</p>
+
+                <p>Jeg liker også å sette opp automatisk sletting av innlegg, ingen grunn til å fylle opp databasen med utdaterte innlegg. Her er hvordan jeg har satt det opp:</p>
+                <img src="images/Auto_slett.png"  alt="skjermbilde">
+
+                <p>Nå må du lage en tilgangsnøkkel for IFTTT. Dette gjør du ganske enkelt ved å gå på innstillinger og «utvikling». Lag en app, du trenger ikke gjøre noe annet enn å gi den ett navn og kopiere din Acccess Token:</p>
+                <img src="images/Masto_App.png" alt="skjermbilde">
+
+                <h2>Steg 2: Lag en Atom URL</h2>
+                <p>Politiet har vært greie og <a href="https://api.politiet.no/politiloggen/index.html">satt opp en Swagger</a> der du kan teste ut og lage din egen RSS- eller Atom-feed for det eller de distriktene du vil at Bot’en skal hente meldinger fra. Jeg har valgt å bruke Atom fremfor RSS.</p>
+
+                <p>Her har jeg laget et eksempel hvor jeg filtrerer på distrikt Oslo, kommune Oslo og kategori "Ro og Orden", bare for å vise alle mulighetene:</p>
+
+                <img src="/images/swagger.jpg" alt="Filtering på Oslo Kommune og Ro og Orden meldinger">
+                <p>Det er da "Request URL" du må kopiere for å bruke i IFTTT applet'en.</p>
+
+                <h2>Steg 3: IFTTT oppsett</h2>
+                <p>Det er nå det morsomme begynner, å bygge en «applet» i IFTTT. Du ønsker å bruke RSS og «New feed item» som IF og en «Webhook» som THEN.</p> 
+                
+                <p>Legg inn URL’en du lagde i steg 2 som feed URL og nøkkelen du hentet ut i steg 1 i «Additional Headers», etter «Authorization: Bearer » (du må skrive inn dette selv).</p>
+                <img src="images/IFTTT_Politiloggen.jpg" alt="skjermbilde">
+
+                <p>Så utformer du selve «Body» teksten akkurat sånn du vil. Dette er det som kommer som innleggstekst på Mastodon. Her kan du kun ha ren tekst og eventuelle custom emojies (som jeg har i eksempelt ved :oslo:). Pass på å ha <<<foran og bak>>> eventuell ren tekst du ønsker å legge til.</p>
+
+                <p>Det kjekke her, er at om du legger opp at folk kan trykke på «EntryUrl» så blir de på mobilen sendt rett til Politiloggen-appen om de har den installert og får opp hele hendelses-historikken. Har de ikke appen, blir de sendt til websiden med akkurat samme info.</p>
+                
+                <h2>Ferdig resultat</h2>
+                <p>Her er eksempel på hvordan et innlegg kan bli seende ut:</p>
+                <img src="images/politiloggen_mikrobloggen.png" alt="skjermbilde">
+
+                <p>Det er egentlig alt. Lek litt med Swagger, du kan filtrere på distrikter, kommuner, typer hendelser og mer.</p>
+
+                <p>Følg gjerne min Bot som poster statusmeldinger og nyheter (en annen RSS feed, også satt opp som en IFTTT applet på samme måte) fra Oslo Politidistrikt: <a rel="me" href="https://mikrobloggen.no/@politiloggen_oslo">@politiloggen_oslo</a></p>
+
+
+                <p><a href="fediverse.html">Tilbake...</a></p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://gauteholmin.no">Gaute Holmin</a></p>
+            <a href="https://notbyai.fyi/"><img src="/images/humannotAI.png" alt="Skrevet av menneske, ikke AI"></a>
+        </footer>
+    </div>
+</body>
+</html>

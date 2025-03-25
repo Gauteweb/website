@@ -27,6 +27,12 @@
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)
         }
 
+        /* CSS Reset for the image */
+        .no-style {
+            all: unset;
+            display: inline-block; /* This ensures the image is displayed correctly */
+        }
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauteweb.net -> Fødiverset</title>
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hva hvis Fødiverset var et skoleball?" />
+    <meta property="og:description" content="Mange har problemer med å skjønne hvordan Fødiverset er bygget opp, hva en instans er og hvem som bestemmer hva som er greit å skrive. Hvorfor ikke se på Fødiverset som et skoleball." />
+    <meta property="og:image" content="https://gauteweb.net/images/bord6.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/fediverse.html" />
+
+</head>
+<body>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+      
+        <main>
+            <section>
+                <h2>Hva hvis Fødiverset var et skoleball?</h2>
+                <p>Kommersielle plattformer som X og Instagram er i fritt fall og rekordmange stormer til åpne sosiale platformer som Mastodon og Pixelfed, begge platformene er en del av "Fødiverset". Mange har problemer med å skjønne hvordan Fødiverset er bygget opp, hva en instans er og hvem som bestemmer hva som er greit å skrive. Jeg ser på Fødiverset som et skoleball.</p>
+
+                <p>De fleste har vært på et skoleball, eller ihvertfall sett noen filmer og serier som tar for seg skoleball. Se for deg at Fødiverset er ballsalen til ballet og at det er mange runde bord i rommet som folk sitter på.</p>
+                
+                    <img src="/images/bord5.jpg" alt="Bord 5">
+
+                <p>Fødiverset er et såkalt desentralisert sosialt nettverk (litt som epost eller gode gamle Internet Relay Chat). Det betyr at Fødiverset ikke er «ett nettsted», men mange. Disse kalles «instanser» og alle kan i praksis starte opp en instans som kobles til nettverket av instanser.</p>
+                
+                <p>Tilbake til skoleballet så er hvert bord en «instans». Se på salkartet her. Se for deg at bord 1 er <a href="https://mastodon.social">mastodon.social</a>, bord 2 er <a href="https://snabelen.no">snabelen.no</a>, bord 3 er <a href="https://pixelfed.social">pixelfed.social</a>, bord 4 er <a href="https://social.vivaldi.net/explore">Vivaldi Social</a>, bord 5 er <a href="https://tutoteket.no">tutoteket.no</a>, bord 6 er <a href="https://mikrobloggen.no">Mikrobloggen</a> og så videre.</p>
+                
+                <p>Noen bord tar imot alle som ønsker å sitte der, mens andre bord er forbeholdt for eksempel de som spiller i korpset.</p>
+
+                <h2>Livet mellom bordene</h2>
+                <p>Se for deg at vi to sitter ved bord 2. Administratoren til <a href="https://snabelen.no">snabelen.no</a> har bestemt reglene for hva vi på bord 2 kan snakke om, men det hindrer oss ikke fra å lage et dansekort, gå opp på dansegulvet og få nye venner fra andre bordene.</p>
+                
+                    <img src="/images/skoleball.jpg" alt="Skoleball">
+
+                <p>Liker du ikke reglene på bord 2, eller føler deg mer hjemme på et annet bord, kan du ta med deg drinken og maten din og flytte deg til et annet bord. Du mister ikke venner eller dansekortet ditt av den grunn, men du legger igjen samtale-historikken din og starter sånn sett med blanke ark.</p>
+                
+                <ul>
+                    <li>Samtaler mellom bordene: Mellom bordene i salen til Mastodon kan du snakke med og følge med på dine venner, uavhengig av hvilke bord vennene dine sitter på.</li>
+                    <li>Samtaler på bordet ditt: Du kan også velge å se på en «lokal feed». Den viser kun hva de på ditt bord snakker om.</li>
+                    <li>Samtaler på dansegulvet: Ser du på «felles feed’en» ser du derimot også hva dine venner og dine venners venner snakker om, uavhengig av hvilke bord de sitter på.</li>
+                </ul>
+                <br />
+                <p>Oppfører du deg skikkelig dårlig kan du bli kastet vekk fra bordet, men da kan du i praksis bare gå og sette deg på et annet bord.</p>
+                
+                <h2>Donald Trump sitt bord og drittsekkbordet</h2>
+                <p>Visste du at Donald Trump sitt sosiale nettverk Truth Social er en Mastodon instans? Jo, det er det faktisk, men han har valgt å holde hjemme-alene fest istedet.</p>
+                
+                <p>Dermed er det slik at de som sitter hjemme hos Donald Trump, de får ikke lov til å snakke med noen på skoleballet og vi på skoleballet får ikke lov til å høre hva som skjer på festen hjemme hos han.</p>
+
+                    <img src="/images/bord13.jpg" alt ="Bord 13">
+
+                <p>Det finnes også et bord på skoleballet der det stort sett bare sitter drittsekker (bord 13). De som administrerer de andre bordene kan da blokkere drittsekk-bordet, slik at vi som sitter på bord 1 slipper å plages med drittsekk-bordet. Både når vi sitter på vårt eget bord og når vi går ut på dansegulvet.</p>
+
+                <h2>Hva er en «bot»?</h2>
+                <p>En bot (forkortelse av robot) er en programvaresnutt som er programmert til å utføre spesifikke oppgaver automatisk og regelmessig uten direkte menneskelig inngripen. I fødiverset finnes det mange forskjellige typer bot'er.</p>
+
+                <p>De fleste bot'er er forskjellige varianter av nyhets-bot'er som poster lenker til artikler innenfor forskjellige temaer.</p>
+
+                <img src="/images/bot_talerstol.jpg" alt="En robot på en talerstol som leser fra en avis">
+                
+                <p>Ved bordet mitt finner du for tiden åtte forskjellige nyhets-bot'er som du kan følge for å <a href="https://mikrobloggen.no/@manny/113744094493168314">holde deg oppdatert innen en rekke emner</a>. Du trenger ikke sitte ved bordet mitt for å følge mine bot'er, du kan følge dem fra hvilket som helst bord.</p>
+
+                <p>Jeg har også <a href="politiloggen.html">laget en liten oppskrift</a> på hvordan du kan sette opp din egen Bot.</p>
+
+                <h2>Konklusjon</h2>
+                <p>Fødiverset er teknisk sett komplekst, men i mine øyne ganske fantastisk. Slapp av, gå rundt i ballsalen og bli kjent med folk på alle bordene (unntatt drittsekkbordet). Jeg håper vi sees, jeg henger mest rundt bordene to til seks.</p>
+
+                    <img src="/images/bord6.jpg" alt="Bord 6">
+
+                <p>Jeg har som sagt etablert meg med mitt eget bord; <a href="https://mikrobloggen.no">Mikrobloggen</a>. Kom gjerne over dit for en prat, det koster noen kroner å sette seg ned hos oss, med det er verdt det om du vil sitte her og spise også.</p>
+
+                <p><a href="/">Tilbake...</a></p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://gauteholmin.no">Gaute Holmin</a></p>
+            <a href="https://notbyai.fyi/"><img src="/images/humannotAI.png" alt="Skrevet av menneske, ikke AI"></a>
+        </footer>
+    </div>
+</body>
+</html>

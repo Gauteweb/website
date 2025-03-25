@@ -3,58 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gauteweb.net -> Hvem er Gaute?</title>
+    <title>Gauteweb.net -> Verifisering</title>
     <meta name="author" content="Gaute Holmin" >
     <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
-    <meta name="generator" content="Perplexity and Visual Studio Code">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
     <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="terminalstyle.css" />
     <link href="https://mikrobloggen.no/@gauteweb" rel="me">
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gauteweb.net" />
+    <meta property="og:description" content="Denne nettsiden brukes for verifisering av eierskap til kallenavnet Gauteweb på Fødiverset og Bluesky." />
+    <meta property="og:image" content="https://gauteweb.net/images/gauteweb_head.png" />
+    <meta property="og:url" content="https://gauteweb.net/" />
+
+
 </head>
 <body>
-<div id="google_translate_element"></div>
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'no',
-        includedLanguages: 'no,en,fr,de',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-}
-</script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <div class="container">
         <header>
-            <p>Navigasjon<br/>
-            ---------<br/>
-                Om Gaute<br />
-                <a href="verifisering.html">Verifisering</a><br />
-                <a href="gaming.html">Gaming</a><br />
-                <a href="lenker.html">Lenker</a>              
-            </p>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
         </header>
+      
         <main>
             <section>
-                <p>Dette domenet ble registrert 31. juli 2005 av Gaute Holmin.</p>
-                <h2>Hvem er Gaute?</h2>
-                <img src="/images/gaute.jpg" alt="Gaute tar selfie">
-                <p>Jeg er født og oppvokst i Oslo. Tidlig datanerd og gamer allerede på slutten av åttitallet.</p>
-                <p>Etter pliktåret i forsvaret tok jeg Polyteknisk Høgskole og kom raskt ut i arbeid som omreisende konsulent. Siden har jeg hatt en god del forskjellige jobber og fritidsprosjekter, primært innenfor IT-bransjen.</p>
-                <p>Noen av de kuleste tingene jeg har gjort er å ha vært Observability Manager for SuperOffice AS, ansvarlig redaktør for Mobile Business Magazine og valgkomite-leder for Obos generalforsamling under "medlemsopprøret".</p>
-                <p>Idag jobber jeg i Sopra Steria hvor jeg har ansvaret for en produktportefølje og et utviklingsteam. Sopra Steria er selskapet jeg har jobbet lengst for (over to perioder).</p>
-                <p>Jeg drifter også Mastodon-instansen <a href="https://mikrobloggen.no/">Mikrobloggen.no</a> som et fritidsprosjekt.</p>
-                
+                <p>Denne nettsiden brukes for verifisering av eierskap til kallenavnet "Gauteweb" på diverse sosiale platformer, spesielt distribuerte platformer som <a href="fediverse.html">Fødiverset</a>.</p>
+
+                <h2>Mastodon</h2>
+                <p>Mastodon har et verifiseringssystem hvor du må legge en lenke <a href="https://mikrobloggen.no/@gauteweb">tilbake til profilen din</a> med variablen rel="me" ett eller annet sted på nettsiden. Jeg har løst det ved å legge lenken inn som en meta-tag slik:</p>
+                <img src="images/meta_domeneshop.png" alt="Meta Info">
+                <p>Nytt fra Mastodon 4.3 er at du også må legge til domener som får lov til å verifisere deg nederst på Innstillinger/Profil/Bekreftelse.</p>
+
+                <h2>Bluesky</h2>
+                <p>Bluesky tilbyr to forskjellige metoder for verifisering av <a href="https://bsky.app/profile/gauteweb.net">profilnavnet ditt</a>. Jeg har valgt DNS-oppføring som verifiseringsmetode slik:</p>
+                <img src="images/atproto_domeneshop.png" alt="DNS Record">
                 
             </section>
         </main>
         
         <footer>
-            <p>&copy; <a href="https://gauteholmin.no/">Gaute Holmin</a></p>
+            <p>&copy; <a href="https://gauteholmin.no">Gaute Holmin</a></p>
             <a href="https://notbyai.fyi/"><img src="/images/humannotAI.png" alt="Skrevet av menneske, ikke AI"></a>
         </footer>
     </div>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauteweb.net -> Bluesky</title>
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hva er Bluesky?" />
+    <meta property="og:description" content="Bluesky er en kommersiell amerikansk plattform som ligner mye på mikroblogg-tjenester som for eksempel X og Threads." />
+    <meta property="og:image" content="https://gauteweb.net/images/bluesky_bitcoin.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/bluesky.html" />
+
+</head>
+<body>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+      
+        <main>
+            <section>
+                <h2>Hva er Bluesky?</h2>
+                <p>Bluesky er en sosial plattform som sprang ut av Twitter. Et eksperiment som etter Musk sitt oppkjøp av Twitter ble skilt ut som et eget selskap. I praksis er Bluesky en kommersiell amerikansk plattform som ligner mye på mikroblogg-tjenester som for eksempel X og Threads.</p>
+
+                <h2>AT Protocol</h2>
+                <p>Ideen var at AT protokollen skulle sørge for et distribuert nettverk med Bluesky servere, litt som ActivityPub for Fediverset. </p>
+
+                <p>Problemet er bare at selv nå, over fem år etter unnfangelsen av ideen og to år etter at tjenesten ble tilgjengelig for sluttbrukere, så er fortsatt ikke protokollen og Bluesky åpnet opp for desentralisering.</p>
+
+                <p>Man kan <a href="/">verifisere seg ved bruk av DNS-oppslag</a> på et domene du selv eier, noe mange tror er tegn på desentralisering, men det er bare en (riktignok ganske genial) verifiseringsmetode.</p>
+
+                <h2>Hvem eier Bluesky</p>
+                <p>Jack Dorsey (grunnlegger av Twitter) er ikke lenger engasjert i Bluesky og selskapet eies primært av Jay Graber sammen med noen ansatte og flere krypto VC selskaper.</p>
+
+                <img src="/images/bluesky_bitcoin.jpg" alt="En dame som ligner på Jay som håndhilser på en forretningsmann som holder i en pengesekk med BitCoin">
+                <p>Det er ikke til å komme unna at Bluesky slik det er organisert idag er et amerikansk selskap med servere i USA og på tross av at selskapet i flere år nå har snakket om desentralisering, så er det fortsatt en sentralisert tjeneste eid av kommersielle eiere som ikke har klart å definere en god forretningsmodell for plattformen ennå.</p>
+
+                <h2>Hvorfor ikke bruke Bluesky?</h2>
+                <p>Tre gode grunner:<p>
+                <ul>
+                    <li>Hevder å være desentralisert når det ikke er det</li>
+                    <li>Amerikansk selskap med VC eiere og servere i USA</li>
+                    <li>Utydelig forretningsmodell med høy risiko</li>
+                </ul><br />
+                
+                <p>Det finnes mange flere grunner som usikkerhet rundt moderering, mulig fremtidig reklamefinansiering basert på algoritmer og så videre, men for meg holder dette til å per idag gi en klar anbefaling om å ikke investere tid på denne platformen, men heller fokusere på dugnadsbaserte, <a href="fediverse.html">desentraliserte plattformer i fødiverset</a>.</p>
+
+                <p>Dog vil jeg ikke utelukke Bluesky helt i fremtiden, CEO Jay Graber har bein i nesa og er stadig hardt ute og kritiserer META og X og snakker mye om desentralisering av tjenesten, så jeg velger å ha en bruker der og forsiktig se ann utviklingen.</p>
+
+                <p><a href="/">Tilbake...</a></p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://gauteholmin.no">Gaute Holmin</a></p>
+            <a href="https://notbyai.fyi/"><img src="/images/humannotAI.png" alt="Skrevet av menneske, ikke AI"></a>
+        </footer>
+    </div>
+</body>
+</html>
