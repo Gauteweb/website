@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauteweb.net -> Europeiske Alternativer</title>
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Europeiske alternativer" />
+    <meta property="og:description" content="Forslag til alternativ programvare og skytjenester som ikke er amerikanske." />
+    <meta property="og:image" content="https://gauteweb.net/images/EU-girls.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/europeisk.html" />
+
+    <script>
+        function resizeIframe() {
+            const iframe = document.querySelector('.responsive-iframe iframe');
+            const width = iframe.offsetWidth;
+            const height = (width / 16) * 9;
+            iframe.style.height = height > 450 ? '450px' : `${height}px`;
+        }
+
+        window.addEventListener('resize', resizeIframe);
+        window.addEventListener('load', resizeIframe);
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+        <main>
+            <section>
+                <p>Det blir stadig mer fokus på å finne europeiske alternativer til amerikansk teknologi. Det er vel liten tvil om at Europa altfor lenge har latt USA sitte i førersetet på digital teknologi og kommersialisering av skytjenester.</p> 
+                
+                <p>Er det en positiv ting ved galskapen til Trump borte i det hvite hus, så er det at det blir et stadig økende fokus på europeisk teknologi. Digitaliseringsminister Karianna Tung ber også alle statlige og kommunale organisasjoner ha en exit-strategi klar fra amerikansk teknologi, det er et ganske tydelig budskap om hvor alvorlig situasjonen har blitt.</p>
+
+
+                <h2>Live sending med Nina Furu</h2>
+                <p>Den 21. mars 2025 var jeg så heldig å få være med på en live-sending på LinkedIn sammen med den smått legendariske Nina Furu for å snakke om europeiske alternativer til amerikanske skytjenester og verktøy.</p>
+                
+                <p><div class="responsive-iframe">
+                    <iframe src="https://www.youtube-nocookie.com/embed/BS1dw5LNvaU?si=F4GAUDaMugOeDWkr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div></p>
+                
+                <p>Her har jeg satt sammen en liten liste over europeiske alternativer jeg bruker.</p>
+                
+                <h2>Alternativ til Chrome/Edge</h2> 
+                <p>Verdens mest brukte nettleser, Coogle Chrome startet som et alternativ til Microsoft Internet Explorer, men har etterhvert selv utviklet seg til å bli en nettleser med høyst tvilsomt forhold til personvern. <a href="https://vivaldi.com/">Det norske alternativet Vivaldi</a> er en nettleser som jeg personlig mener er blitt verdens beste nettleser, både på PC og mobil.</p>
+
+                <h2>Skylagring</h2>
+                <p><a href="https://www.jottacloud.com/">Den norske skylagringstjenesten JottaCloud</a> har jeg sverget til å mange år. Den har fått vind i seilene den siste tiden og har inngått samarbeid med Telenor Min Sky.</p>
+
+                <h2>AI chatbot</h2>
+                <p><a href="https://chat.mistral.ai/chat">Den franske tjenesten Le Chat</a> fra selskapet Mistral AI er et strålende alternativ til Copilot og ChatGPT. Le Chat er ekstremt rask og har en bildegenereringstjeneste for betalende abonnenter.</p>
+
+                <h2>Søkemotor</h2>
+                <p>Når det kommer til søkemotorer er det vanskelig å komme unna Bing og Google, de fleste alternative søkemotorer kjøper søkeresultater fra en av disse to.</p>
+
+                <p><a href="https://www.qwant.com/">Personlig foretrekker jeg den franske Qwant</a>. Denne bruker søkedata fra Bing med et lag med personvern på toppen. Grensesnittet er veldig elegant og søk går veldig fort. Qwant har også sin egen nettleser, men kun for Android og iOS.</p>
+
+                <h2>Bildebehandling</h2>
+                <p>Vil du ha et alternativ til Adobe Photoshop? <a href="https://pixlr.com/no/">Pixlr er en bildebehandlingstjeneste</a> som er i rivende utvikling. Dette er dog ikke et veldig europeisk selskap, det er grunnlagt av en svenske, men selskapet hører hjemme i Singapore.</p>
+
+                <h2>Sosiale medier</h2>
+                <p>I <a href="fediverse.html">Fødiverset</a> finnes det alternativer til de fleste kommerielle sosiale medier.</p>
+
+                <img src="/images/EU-girls.jpg" alt="En jentegjeng som ser på mobilene sine">
+
+                <p><br /><a href="https://joinmastodon.org/">Den tyskutviklede plattformen Mastodon</a> er den mest populære med over 9 millioner registrerte brukere hvorav rundt 2 millioner brukere er aktive iløpet av en måned. Mastodon sees av mange på som et Twitter-alternativ, litt som <a href="bluesky.html">Bluesky</a>, bare at det faktisk er desentralisert, i motsetning til Bluesky som er et amerikansk selskap som kun i teorien kan desentraliseres.</p>
+
+                <p><a href="https://hudd.no/">Det norske Facebook-alternativet Hudd</a> er også en spennende plattform å følge med på fremover.</p>
+
+                <h2>Andre tjenester</h2>
+                <p>Dette var bare et lite knippe av de alternativene jeg bruker daglig. Det finnes en nettside som vedlikeholder en <a href="https://european-alternatives.eu/alternatives-to">liste over europeiske alternativer</a> til de mest vanlige amerikanske teknologiene man måtte finne på å bruke.</p>
+
+                    <p><a href="/">Tilbake...</a></p>
+                
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://gauteholmin.no/">Gaute Holmin</a></p>
+            <a href="https://notbyai.fyi/"><img src="/images/humannotAI.png" alt="Skrevet av menneske, ikke AI"></a>
+        </footer>
+    </div>
+</body>
+</html>

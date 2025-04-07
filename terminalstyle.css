@@ -103,3 +103,17 @@
         .goog-te-gadget { 
             color: transparent !important; 
         }
+        .responsive-iframe {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Set max width to 800 pixels */
+            margin-right: auto; /* Align to the left */
+            height: auto;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+        .responsive-iframe iframe {
+            width: 100%;
+            height: auto;
+            max-height: 450px; /* Set max height to 450 pixels */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
