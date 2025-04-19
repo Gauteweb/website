@@ -117,3 +117,27 @@
             max-height: 450px; /* Set max height to 450 pixels */
             box-sizing: border-box; /* Include padding and border in the element's total width and height */
         }
+
+        /* For WebKit-based browsers (Chrome, Safari, Opera) */
+        ::-webkit-scrollbar {
+            width: 12px; /* Bredden på scrollbar'en */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0000C0; /* Bakgrunnsfargen til scrollbar-sporet */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: white; /* Fargen på scrollbar-håndtaket */
+            border-radius: 10px; /* Avrundede hjørner */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ddd; /* Farge når du holder musen over scrollbar-håndtaket */
+        }
+
+        /* For Firefox */
+        * {
+            scrollbar-width: thin; /* Bredden på scrollbar'en */
+            scrollbar-color: white #0000C0; /* Farge på håndtaket og sporet */
+        }
