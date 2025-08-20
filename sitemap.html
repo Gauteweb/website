@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Sidekart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="Dette er sidekartet (sitemap) til nettsiden Gauteweb.net.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gauteweb.net" />
+    <meta property="og:description" content="Dette er sidekartet (sitemap) til nettsiden Gauteweb.net." />
+    <meta property="og:image" content="https://gauteweb.net/images/kart.png" />
+    <meta property="og:url" content="https://gauteweb.net/sitemap.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+      
+        <main>
+            <section>
+                <p>Denne nettsiden har ingen søkefunksjon, så derfor har jeg laget et veldig enkelt sidekart her:</p>
+
+                <ul>
+                    <li><a href="/">Om Gaute</a>
+                        <ul>
+                            <li><a href="firefox.html">Mitt Firefox-oppsett</a></li>
+                            <li><a href="mobil.html">Mitt mobiloppsett</a></li>
+                            <li><a href="gamingnow.html">#GauteSpiller</a>
+                                <ul>
+                                    <li><a href="steamdeck.html">Håndholdt gaming</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="verifisering.html">Verifisering av brukernavn</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="o11y.html">Hva er Observability (O11y)?</a></li>
+                    <li><a href="europeisk.html">Europeiske Alternativer</a>
+                        <ul>
+                            <li><a href="techbros.html">Tech Bros i det Hvite Hus</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="fediverse.html">Fødiverset</a>
+                        <ul>
+                            <li><a href="mikrobloggen.html">Mikrobloggen</a>
+                                <ul>
+                                    <li><a href="topdogs.html">TopDogs Sosietetsforening</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="politiloggen.html">Mastodon-bot basert på RSS</a></li>
+                            <li><a href="feedlybot.html">Mastodon-bot basert på Feedly</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="bluesky.html">Bluesky</a></li>
+                    <li><a href="elbil.html">Elbil og lading</a></li>
+                    <li><a href="sykkel.html">Sykle til jobb</a>
+                        <ul>
+                            <li><a href="sykkelhjelm.html">Bør vi ha hjelmpåbud?</a></li>
+                            <li><a href="sykkelfylla.html">Kan du sykle i fylla?</a></li>
+                            <li><a href="sykkelfart.html">Hvor raskt går en tråsykkel?</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+              
+                <br />
+
+                <img src="images/kart.jpg" alt="Et kjærestepar som står og ser på et kart.">
+
+                <p><br />Jeg håper du fant noe interessant å lese om her, men fant du ikke det du lette etter, kan du alltids <a href="https://mikrobloggen.no/@gauteweb">spørre meg direkte på fediverset</a> :-)</p>
+
+                <p><br /><a href="/">Tilbake...</a></p>
+                
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://mikrobloggen.no/@gauteweb">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

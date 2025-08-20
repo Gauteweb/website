@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Her er noe blitt borte...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="404 ikke funnet, dette er standard feilsiden på Gauteweb.net.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="404" />
+    <meta property="og:description" content="Her er noe blitt borte..." />
+    <meta property="og:image" content="https://gauteweb.net/images/404postergirl.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/404.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+</head>
+<body>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+      
+        <main>
+            <section>
+                <img src="/images/404postergirl.jpg" alt="404">
+
+                <p><br />Her må jeg bare beklage og si at hva enn du leter etter så har det blitt flyttet, slettet eller aldri eksistert.</p>
+
+                <p>Ta heller en <a href="sitemap.html">titt på sidekartet</a> for å se om du finner det du leter etter.</p>
+
+                <p><a href="/">Tilbake...</a></p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://mikrobloggen.no/@gauteweb">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

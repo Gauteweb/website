@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Min mobiltelefon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+            <!--SEO-->
+            <meta name="author" content="Gaute Holmin" >
+            <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+            <meta name="description" content="Mobiltelefonen er den mest personlige teknologiske dingsen man har. Slik har jeg satt opp min mobiltefon.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mitt mobiloppsett" />
+    <meta property="og:description" content="Mobiltelefonen er den mest personlige teknologiske dingsen man har. Slik har jeg satt opp min mobiltefon." />
+    <meta property="og:image" content="https://gauteweb.net/images/manndamemobil.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/mobil.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+    <script>
+        function resizeIframe() {
+            const iframe = document.querySelector('.responsive-iframe iframe');
+            const width = iframe.offsetWidth;
+            const height = (width / 16) * 9;
+            iframe.style.height = height > 450 ? '450px' : `${height}px`;
+        }
+
+        window.addEventListener('resize', resizeIframe);
+        window.addEventListener('load', resizeIframe);
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+        <main>
+            <section>
+                <p>Helt siden jeg kjøpte min første smarttelefon (Nokia 9110i Communicator) så har jeg hatt et spesielt forhold til mobiltelefoner og kanskje aller mest: tilpasning av grensesnittet på dem, nesten til det ugjenkjennelige.</p>
+
+                <p>Jeg var da også avis-gründer, journalist og i en periode ansvarlig redaktør i bransjeavisen Mobile Business Magazine (2009-2015). I den perioden fikk jeg virkelig boltre meg i telefoner, utstyr og tjenester. Jeg var også i en periode nærmest fast "mobil-ekspert" i Dagbladet:</p>
+
+                <img src="/images/dagbladet.jpg" alt="Faksimile fra midsiden til Dagbladet i papirutgaven 24. mars 2013.">
+
+                <p><br />Idag har jeg ikke like god tilgang på dingser og tjenester å teste, men her er de appene jeg bruker mest og ville slitt med å klare meg uten på min mobiltelefon (Android):</p>
+
+                <ul>
+                    <li>180.no nummeroppslag</li>
+                    <li>Firefox nettleser</li>
+                    <li>Thunderbird epost</li>
+                    <li>Le Chat fra Mistral AI</li>
+                    <li>Tusky (mastodon-klient)</li>
+                    <li>Verisure (smarthus)</li>
+                    <li>Withings Health</li>
+                    <li>Pocket Casts</li>
+                </ul><br />
+
+                <img src="/images/manndamemobil.jpg" alt="Mann som ser på en mobiltelefon med en dame bak seg.">
+
+                <p><br />Som arbeidsverktøy fra arbeidsgiver bruker jeg daglig Outlook og Teams.</p>
+
+                <p>Jeg har selvfølgelig masse andre apper, både private og til jobb, men dette er de ti appene jeg bruker sånn i det daglige, tilnærmet hver eneste dag.</p>
+
+                <h2>Tilpasse utseende</h2>
+
+                <p>Så liker jeg også å tilpasse telefonen min og endre standard-funksjonalitet, så jeg bruker Niagara Launcher Pro som "hjemskjerm" og Textra som SMS-klient.</p>
+
+                <p>Niagara Launcher er en fantastisk launcher som gjør om Android-telefonen din til... noe helt annet! Jeg liker faktisk denne launcheren såpass godt at jeg bidrar fast til å lage den norske oversettelsen og har skrevet det aller meste av det norske grensesnittet i appen.</p>
+
+                <p>Jeg liker å leke meg med å endre utseendet med bakgrunnsbilde, tekst, ikoner og widgets, men dette er en stil jeg stadig kommer tilbake til, som en hyllest til et av de kuleste spillene igjennom tidene:</p>
+
+                <img src="images/niagara_dott.jpeg" alt="Day of the Tentacle tema">
+
+                
+
+                    <p><br /><a href="/">Tilbake...</a></p>
+                
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://mikrobloggen.no/@gauteweb">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>
