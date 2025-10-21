@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Steam Deck, håndholdt gaming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="Med Steam Deck har Valve bevist at det også finnes et marked for ekstremt kraftige håndholdte maskiner som kan spille fullstørrelse spill beregnet for PC og nå ser det plutselig ut til at Microsoft plattformen på alvor.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Håndholdte spillkonsoller, den nye konsollkrigen?" />
+    <meta property="og:description" content="Med Steam Deck har Valve bevist at det også finnes et marked for ekstremt kraftige håndholdte maskiner som kan spille fullstørrelse spill beregnet for PC og nå ser det plutselig ut til at Microsoft plattformen på alvor." />
+    <meta property="og:image" content="https://gauteweb.net/images/SteamDeck.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/steamdeck.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+    <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+        <main>
+            <section>
+
+            <p>Valve sin Steam Deck  er uten tvil det beste gadget-kjøpet jeg har gjort på mange år og nå har jeg også kjøpt den første håndholdte konsollen fra en OEM produsent som offisielt kjører Steam OS fra Valve, nemlig <a href="https://www.spillnorge.no/blog/lenovo-legion-go-s-steam-os">Lenovo Legion Go S</a>.</p> 
+            
+            <p>Jeg kan spille (nesten) <a href="gamingnow.html">alle favorittspillene mine</a> hvor jeg vil på en dings som holder høy kvalitet og føles eksklusiv og solid.</p>
+
+            <img src="/images/steamdeck_docked.jpg" alt="Min Steam Deck i  dockingstasjonen fra Ugreen">
+
+            <p><br />Nintendo har helt siden den første Gameboy'en alltid satt standarden i den håndholdte klassen av spillkonsoller og alltid regjert den, kanskje med et lite unntak i Playstation Portable (PSP) sine glansdager.</p>
+
+            <img src="/images/handhelds.jpg" alt="Mine håndholdte konsoller opp igjennom årene">
+
+            <p><br />Med Steam Deck og Steam OS har Valve bevist at det også finnes et marked for ekstremt kraftige håndholdte maskiner som kan spille fullstørrelse spill beregnet for PC. </p>
+
+            <p>Jeg har både skrevet en omtale av <a href="https://www.spillnorge.no/blog/omtale-av-steam-deck-oled-1tb">Steam Deck OLED 1GB</a> og av <a href="https://www.spillnorge.no/blog/lenovo-legion-go-s-steam-os">Lenovo Legion Go S</a> på SpillNorge.no, så jeg skal ikke gjengi meg selv altfor mye her om disse to håndholdte spillkonsollene.</p>
+
+            <h2>Fremtidens håndholte spillkonsoller</h2>
+            <p>Etter at Sony mer eller mindre gav opp dette markedet har Nintendo med sin Switch dominert og nærmest hatt monopol på det håndholdte spillmarkedet (da regner jeg ikke med mobilspill). Etter at Steam Deck har hatt en kjempesuksess de siste par årene så lanserte Lenovo våren 2025 den første tredjeparts SteamOS maskinen noensinne, <a href="https://www.spillnorge.no/blog/lenovo-legion-go-s-steam-os">Legion Go S med Steam OS</a>. Det ser ut til at denne har blitt en kjempesuksess.</p>
+
+            <img src="/images/gaming_stranden.jpg" alt="Et par som spiller på hver sin håndholdte konsoll på stranden.">
+
+            
+            <p><br />Vi har allerede sett det på TV-programmer som Spillet på TV2, at unge mennesker idag har med seg sin Nintendo Switch på tur. I fremtiden tror jeg vi vil se stadig flere som gamer "på farten". Håndholdte konsoller vil bli inngangsporten til gaming for stadig flere mennesker, og med litt flaks vil håndholdt gaming ta tid vekk fra hjerneløse sosiale medier og algoritmestyrt medie-konsum.</p>
+            
+            <p></p>Om Valve sin OEM-utvidelse av SteamOS og Nintendo's lansering av Switch 2 er den direkte grunnen til at Microsoft plutselig bare noen måneder senere annonserte at de nå lager en spesilaversjon av Windows 11 for håndholdte konsoller sammen med ASUS ROG er usikkert, men jeg har en mistanke om det, Microsoft ønsker seg nok ikke at Android-historien skal gjenta seg (der Apple og Google fullstendig tok over smarttelefon-markedet som Microsoft i praksis regjerte i med Windows Phone).</p>
+
+            <p>Mens Xbox, Playstation og GPU'er generelt galloperer prismessig tror jeg fremtidens spillplattform-krig står på håndholdte konsoller og for de som liker sånt, så ble verden brått utrolig mye mer spennende våren 2025.</p>
+
+            <p>I praksis ser vi en krig i støpeskjeen mellom Nintendo, Microsoft og Valve, mens ingen helt vet hva Sony pønsker på. </p>
+                
+            <p>Personlig heier jeg på underdog'en i dette spetakkelet; Valve. Det eneste som er sikkert at vi gamere blir vinnerne av en ny konsollkrig :-)</p>
+
+
+            
+            <iframe
+                src="https://gamer2810.github.io/steam-miniprofile/?accountId=76561199211154063&lang=norwegian&interactive=true&vanityId=Gauteweb"
+                width="100%"
+                height="250px"
+                frameborder="0">
+            </iframe>
+
+                <p><a href="gamingnow.html">Tilbake...</a></p>
+                
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://mikrobloggen.no/@gauteweb">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

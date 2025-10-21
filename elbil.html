@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Elbil og lading</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="Noen tanker rundt elbil, hurtiglading på ferietur og lading i fellesgarasjer for borettslag og sameier.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Elbil og lading" />
+    <meta property="og:description" content="Noen tanker rundt elbil, hurtiglading på ferietur og lading i fellesgarasjer for borettslag og sameier. />
+    <meta property="og:image" content="https://gauteweb.net/images/elbillading.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/elbil.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+        <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+        <main>
+            <section>
+            
+            <p>Etter å ha kjørt elbil i over fem år nå og ha vært styreleder i et borettslag som investerte i et ladeanlegg før det ble særlig vanlig, så har jeg noen erfaringer jeg tenkte å dele.</p>
+
+            <img src="/images/VolvoEX30.jpg" alt="En svart Volvo EX30 med en SUP festet til takstativet">
+            <p>Vår nåværende elbil, en Volvo EX30 (Ultra Performance).</p>
+
+            <h2>Lading i borettslag og sameier</h2>
+
+            <p>Den største feilen styrer i mange borettslag og sameier gjør, er å ikke ta eierskap til lading av beboeres elbiler. Det har de siste årene blitt lovfestet en rett å få ladet sin elbil om du har en fast parkeringsplass og jeg har sett flere sameier og borettslag via bekjente og familie som har løst dette ekstremt dårlig.</p>
+
+            <p>Alle borettslag og sameier som ikke har gjort det ennå, må investere i et lastbalansert ladeanlegg. Her er en liten liste over ting jeg mener er viktige:</p>
+
+            <ul>
+                <li>Borettslaget/Sameiet bør eie anlegget selv, ikke fall for fristelsen til å lease anlegget fra en leverandør.</li>
+                <li>Søk støtte fra kommunen så tidlig som mulig så det er på plass før montering.</li>
+                <li>Velg et anlegg/ladere som ikke er låst til en driftsleverandør og sørg for at det er på nett så det kan fjern-administreres.</li>
+                <li>Med mindre styret ønsker å bruke tid på avlesning og fakturering, sett bort all administrasjon til en leverandør, det er lett verdt det!</li>
+                <li>Kjøp anlegget igjennom en god elektrikker dere har god kjemi med, det får dere igjen for om et par år når anlegget trenger service.</li>
+            </ul>
+
+            <p><br />I mitt borettslag gikk vi for (jeg ledet prosjektet) et Schneider anlegg levert av Enviro Elektro. Vi klarte å overtale alle beboere til å investere i ladebokser fra dag én slik at det har blitt minst mulig kabelstrekk og installasjonen er ekstremt strøken og profesjonell. Vi har såpass bra kapasitet inn i fellesgarasjen at beboerne kan få opp til 22kWh hastighet, men realistisk sett ligger de fleste ladinger på 7-11kWh avhengig av hvor mange som lader samtidig og når på døgnet de lader (vi gir ut lavere kapasitet på dagtid når effektleddet er dyrt).</p>
+
+            <p>I vårt borettslag har vi per nå 24 beboere som kjører elbil (av 34 totalt). Ser jeg på ladestatistikken for ifjor så kan vi si at hver enkelt elbil lades i snitt to ganger i uka.</p>
+ 
+            <img src="/images/ladetrend_borettslaget.png" alt="Antall ladeøkter i mitt borettslag i 2024.">
+
+            <p><br />Anlegget har fungert helt greit nå i fem år, vi har hatt noe trøbbel med defekte sikringer og jordfeilbrytere, men ikke mer enn man kan forvente. </p>
+ 
+            <p>Vi driftet det først et par år selv, men etter at Schneider la ned selvbetjeningsløsningen deres, satt vi bort administrasjonen til Movel. Helt ærlig: Det har borettslaget OG beboerne spart penger på, administrasjonskostanden er omtrent lik som før, men strømutregningen blir mer presis så man kan lade "smartere" i forhold til strømprisene.</p>
+
+            <h2>Hurtiglading på langtur</h2>
+
+            <p>Mange har fortsatt "rekkeviddeangst" og kvier seg for å dra på bilferie med elbilen. Vi har kjørt flere ganger tur/retur Vesterålen-Oslo, samt til den danske øya Bornholm, så jeg har fått litt erfaring med å dra på langtur med elbil og jeg kan trygt si at det er ingenting å være redd for!</p>
+
+            <p>Derfor tenkte jeg også å dele noen erfaringer med hurtiglading på langtur.</p>
+
+            <img src="/images/elbillading.jpg" alt="Dame som hurtiglader bilen sin på tur">
+
+            <p><br />Vår bil går rundt 35 mil på en lading, men i praksis ser vi at etter å ha kjørt i tre timer er vi lei, trenger å strekke på beina og få litt mat. Det sammenfaller veldig bra med å lade bilen. Det er også blitt såpass bra dekning med hurtigladere i Norge at du ikke trenger å planlegge ladingen. I Sverige er det litt mer skralt, men langs hovedveiene er det stort sett ikke noe problem der heller.</p>
+
+            <p>Du trenger ikke ha en masse apper eller ladebrikke for å lade, men skal du være prisbevisst så lønner det seg å bruke ladeselskapenes egne apper. Her er erfaringen vi har med noen ladeselskaper:</p>
+
+            <ul>
+                <li>Tesla: Alltid billigst og ladeparkene har nesten aldri ladekø. Litt mer kronglete å komme igang med ladingen om du ikke kjører en Tesla bil, men helt overkommelig. De gamle superchargerne (de med stort hull i midten) til Tesla passer kun til biler som har ladeport på venstre side bak på bilen, den nye superchargerne har lang nok kabel til alle typer elbil.</li>
+                <li>Elton: Denne appen kan du bruke til nesten alle ladeselskaper i Skandinavia unntatt Tesla, men de tar et påslag i prisen. En app du bør ha så du slipper å knote om du kommer til et sted med et ladeselskap du ikke har brukt før.</li>
+                <lI>CircleK: Veldig enkelt å lade, spesielt om bilen din støtter Autocharge, da er det bare å plugge til bilen så starter ladingen automatisk. CircleK er dog blant de dyreste å lade hos. CircleK har sjelden mange ladere per stasjon, så det kan fort bli ladekø i ferier.</lI>
+                <li>Recharge (Shell/St1): De nye stolpene deres har kortleser som også støtter Apple/Google Pay. Det gjør det ekstremt enkelt å starte ladingen helt uten app, bare plugg inn og tapp telefonen. Prisen er omtrent på nivå med CircleK.</li>
+                <li>Ionity: Billigste alternativet til Tesla, helt grei app.</li>
+            </ul>
+
+            <p><br />Jeg kunne listet opp mange andre ladeselskaper her, som for eksempel Mer, Bilkraft, osv... men dette er de jeg primært bruker. Vær obs på at enkelte ladeselskaper tar påslag om du lader bilen over 80% slik at det kan bli dyrt å la bilen stå og lade mens du spiser eller ser på severdighetene. De fem jeg har listet opp her gjør ikke det, med unntak av Tesla som tar et lite parkeringsgebyr om bilen står i en ladepark etter å ha blitt ladet helt opp, men kun hvis mer enn halvparten av ladeplassene er opptatt.</p>
+
+            <p>Generelt sett lader jeg så langt jeg kan hos Tesla fordi det er mindre fare for ladekø, ladeparkene er ofte bedre lokalisert med tanke på ting å gjøre mens bilen lader og de er billigst. Det er muligens noe politisk ukorrekt, men det får så være tenker jeg når det handler om å få en best mulig ferieopplevelse med små barn på tur.</p>
+            
+            
+              <p><br /><a href="/">Tilbake...</a></p>  
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://gauteholmin.no/">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

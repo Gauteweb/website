@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Verifisering</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="Denne nettsiden brukes for verifisering av eierskap til kallenavnet Gauteweb på Fødiverset og Bluesky.  Her er en forklaring på hvordan det er løst.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Verifisering av brukernavn på Mastodon og Bluesky" />
+    <meta property="og:description" content="Denne nettsiden brukes for verifisering av eierskap til kallenavnet Gauteweb på Fødiverset og Bluesky. Her er en forklaring på hvordan det er løst." />
+    <meta property="og:image" content="https://gauteweb.net/images/passkontroll.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/verifisering.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+        <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+      
+        <main>
+            <section>
+                <p>Denne nettsiden brukes for verifisering av eierskap til kallenavnet "Gauteweb" på diverse sosiale platformer, spesielt distribuerte platformer som <a href="fediverse.html">Fødiverset</a>.</p>
+
+                <img src="/images/passkontroll.jpg" alt="Passkontroll">
+
+                <p><br />Her følger en forklaring på hvordan jeg har løst dette på de plattformene jeg per nå har verifisert kallenavnet "Gauteweb".</p>
+
+                <h2><a href="mikrobloggen.html">Mastodon</a></h2>
+                <p>Mastodon har et verifiseringssystem hvor du må legge en lenke <a href="https://mikrobloggen.no/@gauteweb">tilbake til profilen din</a> med variablen rel="me" ett eller annet sted på nettsiden. Jeg har løst det ved å legge lenken inn som en meta-tag slik:</p>
+                <img src="images/meta_domeneshop.png" alt="Meta Info">
+
+                <p><br />Under innstillinger og "bekreftelse" på din Mastodon-instans kan du sjekke om det virket:</p>
+
+                <img src="/images/mastodon_profilbekreftelse.jpg" alt="Her dukker alle nettsider du har lagt inn en link">
+
+                <p><br />For å synliggjøre dette for andre brukere må du igjennom et steg til, du må legge til URL'en til nettsiden din som et ekstra felt på profilen din. Du kan kalle den hva du vil, Mastodon vil automatisk markere URL'en som verifisert. Her er hvordan jeg har gjort det:</p>
+
+                <img src="/images/mastodon_endreprofil.jpg" alt="Tilpass hvordan profilen din ser ut">
+
+                <h2><br /><a href="bluesky.html">Bluesky</a></h2>
+                <p>Bluesky tilbyr to forskjellige metoder for verifisering av <a href="https://bsky.app/profile/gauteweb.net">profilnavnet ditt</a>. Hos Bluesky blir da brukernavnet ditt domenenavnet, ganske genialt egentlig.</p> 
+                
+                <p>Bluesky har en ganske grei veiledning under Settings, Account og Change Handle:</p>
+                
+                <img src="/images/bsky_changehandle.jpg" alt="Guide fra Bluesky">
+
+                <p><br />Jeg har valgt DNS-oppføring som verifiseringsmetode slik hos min domeneregistrerar (Domeneshop):</p>
+
+                <img src="images/atproto_domeneshop.png" alt="DNS Record">
+
+
+
+                <p><br /><a href="/">Tilbake...</a></p>
+                
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://mikrobloggen.no/@gauteweb">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

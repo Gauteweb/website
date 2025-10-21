@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Sykkel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="Jeg har på mine eldre dager blitt helårssyklist og sykler med elsykkel hver eneste dag.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Min sykkel og jeg..." />
+    <meta property="og:description" content="Jeg har på mine eldre dager blitt helårssyklist og sykler med elsykkel hver eneste dag." />
+    <meta property="og:image" content="https://gauteweb.net/images/gaute_vintersykkel.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/sykkel.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+        <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
+
+</head>
+<body>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+      
+        <main>
+            <section>
+                <p>September 2020 kjøpte jeg min første elsykkel. Da hadde jeg hele våren og sommeren brukt min elsparkesykkel til å reise til og fra jobb, men jeg syntes det begynte å bli litt skummelt så jeg oppgraderte til en elsykkel. Det betyr at det nå er over fem år siden sist jeg hadde et månedskort hos Ruter.</p>
+
+                <p>Dette med å kjøpe meg en elsykkel og sykle til jobb var noe jeg hadde tenkt på i flere år siden stadig flere av naboene våre byttet ut bil eller månedskort med elsykkel, men det var pandemien som fikk meg til å ta skrittet ut.</p>
+                    
+                
+                <p>Siden har jeg ikke angret et sekund og jeg ble ganske fort helårssyklist da det å sette seg på T-banen igjen fristet lite når vinteren kom og pandemien fortsatt herjet i byen. </p>
+                
+                <img src="/images/gaute_vintersykkel.jpg" alt="Gaute tar selfie">
+
+                <p><br />Sett opp mot sparte kroner på kollektivtrafikk sparte jeg inn investeringen av sykkelen på to år.</p>
+                    
+                <p>Reiseveien min tar meg som igjennom fire bydeler. Det er variert tur igjennom små avsidesliggende villaveier på Nordstrand, <a href="sykkelfart.html">full fart</a> ned Kongsveien og igjennom noen urbane bygater før jeg svinger ned i garasjen på kontoret. Turen tar meg litt over 25 minutter og er på ganske nøyaktig en mil.</p>
+
+                <img src="/images/sykkelrute.jpg" alt="Min sykkelrute hjemmefra til jobb">
+
+                <p><br />Jeg har spart utrolig mye tid, jeg bruker minst 15-20 minutter mindre HVER vei enn om jeg skulle brukt T-banen. Enda mer tid er spart hvis du regner inn tiden jeg sparer på å sykle til og fra barnehagen også (sykkelvogn og elsykkel er genialt).</p>
+
+                <h2>Helseeffekt</h2>
+                <p>Elsykkel er juks hører jeg enkelte si, gjerne fra folk som ikke sykler i det hele tatt selv, men det er det faktisk forsket på!</p>
+
+                <p><a href="https://forskning.no/hjerteinfarkt-norges-idrettshogskole-partner/a-sykle-til-jobben-er-sunt-selv-pa-el-sykkel/1983267">Doktoravhandlingen til Solveig Nordengen</a> viser at selv om du ikke får helt samme treningseffekt av å sykle elsykkel som vanlig sykkel, så får du den samme helseeffekten. Faktisk så reduserer du risikoen for hjerte- og kar-sykdommer med 22% ved å sykle minst én dag i uka. 22% redusert risiko vil teoretisk sett bety at du kan regne med å leve opptil flere år lenger.</p>
+
+                <p>Som en litt lubben mann som pusher femti med små barn og sans for feit mat og sjokolade så er jo selvfølgelig dette også en stor motivasjonsfaktor! Jeg har heller nesten ikke vært syk siden jeg begynte å sykle daglig.</p>
+
+                <h2>Utstyr på sykkelen</h2>
+                <p>Jeg har noe utstyr på sykkelen som gjør livet litt lettere når den brukes rundt en time hver dag. Alt av bagasje jeg tar med meg har jeg i sidevesker på bagasjebrettet. Ryggsekk er fint, men du blir svett på ryggen uansett, så jeg sverger til bagasjebrettet.</p>
+
+                <img src="/images/ElifePumaSIII.jpg" alt="Elife Puma S III med gule Ortlieb sidevesker">
+
+                <p><br />Resten av utstyret jeg har kjøpt til min sykkel står montert på sykkelstyret.</p>
+
+                <p>Jeg <a href="sykkelhjelm.html">har en sykkelhjelm med visir</a>. Visiret er genialt når det regner MYE i sommerhalvåret, men spesielt praktisk i vinterhalvåret når briller fort dogger igjen, men du likevel ønsker beskyttelse for øynene i regn- og snøvær.</p>
+                
+                <img src="/images/sykkelstyret.jpg" alt="Mitt sykkelstyre">
+                
+                <p><br />Jeg har byttet ut hele styret med et mer ergonomisk styre som gjør det mer behagelig å sykle, spesielt for håndleddene mine som verket av det rette "terrengsykkelstyret" som opprinnelig stod på sykkelen. Jeg har også kjøpt en ekstra "styrepinne" som sitter litt hevet over styret for å montere ekstra utstyr på. Her finnes det mange varianter, jeg har egentlig bare kjøpt den billigste greia jeg fant på en eller annen kinesisk nettbutikk.</p>
+
+                <p>Så er det kjekt med en mobilholder på styret for å bruke til kart og lignende. Her finnes det mange varianter. Jeg sverger til den dyreste løsningen fra Quad Lock og elsker den.</p>
+
+                <p>For de mørkeste dagene har jeg en ekstra, relativt billig batteridrevet frontlykt fra Clas Ohlson for å se og bli sett bedre da jeg synes det medfølgende frontlyset er litt svakt.</p>
+
+                <p>Så tilslutt har jeg vært så heldig å få en Remotek One fjernkontroll til test. Den er egentlig utviklet for motorsykkel, men produsenten vil nå også satse på sykkelmarkedet. Det synes jeg de gjør lurt i, for denne gjør det enkelt å bruke Google Maps og en rekke andre apper mens du sykler</p>
+
+                <p>Jeg har forøvrig også skrevet <a href="https://www.linkedin.com/pulse/hvordan-overleve-som-hel%C3%A5rssyklist-gaute-holmin-fec8f/">en artikkel på LinkedIn om det å være helårssyklist</a> med noen tips og triks for å trives på sykkelsetet uansett vær og føre.</p>
+
+                <p><strong>NB:</strong> Den mest populære bloggposten på bloggen min de siste par årene før jeg la ned bloggen var en post som beskrev hva reglene er rundt det å sykle når du er beruset. Jeg har flyttet innholdet over hit og justert det litt.</p>
+                
+                <p>Så <a href="sykkelfylla.html">lurer du på om du kan sykle i fylla, så har jeg svaret</a>.</p>
+
+
+                <p><a href="/">Tilbake...</a></p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://mikrobloggen.no/@gauteweb">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

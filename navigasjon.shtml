@@ -1,0 +1,16 @@
+<head>    <!-- No caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+
+<header>
+    <p>Navigasjon<br/>
+    ---------<br/>
+    
+        <a href="o11y.html">Observability</a><br />
+        <a href="gamingnow.html">#GauteSpiller</a><br />
+        <a href="sitemap.html">Sidekart</a><br />
+    </p>
+
+</header>

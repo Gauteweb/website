@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <title>Gauteweb.net -> Hvem er Gaute?</title>
+    <title>Gauteweb.net -> Hva er dette for et nettsted?</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Le Chat and Visual Studio Code">
@@ -16,9 +16,9 @@
     <meta name="description" content="Denne nettsiden er utviklet av Gaute Holmin som en hyllest til gamle hjemmesider slik vi lagde dem på starten av 2000-tallet.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Om Gauteweb" />
-    <meta property="og:description" content="Hvem står bak kallenavnet Gauteweb?" />
-    <meta property="og:image" content="https://gauteweb.net/images/gauteweb_head.png" />
+    <meta property="og:title" content="Om dette nettstedet" />
+    <meta property="og:description" content="Hva er dette for et nettsted?" />
+    <meta property="og:image" content="https://gauteweb.net/images/skrivestue.jpg" />
     <meta property="og:url" content="https://gauteweb.net/" />
     <meta property="og:author_name" content="Gaute Holmin">
     <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
@@ -76,7 +76,7 @@
             <div id="navigasjon"></div>
 
             <script>
-                fetch('navigasjon.shtml')
+                fetch('navigasjon.shtml?t=' + new Date().getTime())
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('navigasjon').innerHTML = data;
@@ -85,36 +85,30 @@
         </header>
         <main>
             <section>
- 
-                <center><img src="/images/rebelscum500px.png"  class="no-shadow" alt="Gaute i en Star Wars T-skjorte inne i Millenium Falcon"></center>
 
-                <p>Dette er min digitale hage. Her finner du <a href="sitemap.html">diverse artikler og guider</a> som jeg av og til får lyst til å skrive når 500 tegn på <a href="https://mikrobloggen.no/@gauteweb">Mikrobloggen</a> ikke er nok.</p>
+                <p>Dette domenet ble registrert 31. juli 2005 av undertegnede. Det har opp igjennom årene blitt brukt til forskjellige formål. Det har vært en engelskspråklig blogg, presentasjonsside for et enkeltmannsforetak og fungert som applikasjonsserver for forskjellige åpen-kildekode prosjekter jeg har prøvd ut.</p>
 
-                <p><a href="hvorfor.html">Digital Garden er et begrep</a> som beskriver en personlig, stadig utviklende samling av notater, ideer, lærdom og tanker publisert på nett—gjerne i en uferdig, organisk form.</p> 
+                <h2>Hva er en Digital Hage?</h2>
+                <p>Digital Garden er et begrep som beskriver en personlig, stadig utviklende samling av notater, ideer, lærdom og tanker publisert på nett—gjerne i en uferdig, organisk form. I motsetning til tradisjonelle blogger eller statiske nettsider, er en digital hage ment å vokse og forandres over tid, akkurat som en ekte hage. </p>
+
+                <img src="/images/hage.jpg" alt="To mennesker som står i en hage og drikker fra en termos">
+
+                <p><br />Uttrykket "Digital Garden" stammer fra en metafor brukt av teknologiskribenten Mark Bernstein på 1990-tallet. Han sammenlignet hypertekst med en hage, der ideer vokser og forgrener seg, i motsetning til en strøm/feed, der innholdet flyter forbi i kronologisk rekkefølge.</p>
                 
-                <p>I motsetning til tradisjonelle blogger eller statiske nettsider, er en digital hage ment å vokse og forandres over tid, akkurat som en ekte hage med ideer og tanker som vokser og forgrener seg.</p>
+                <h2>Hvorfor ser hagen ut som den gjør?</h2>
 
-                <h2>Hvem er Gaute?</h2>
+                <p>I denne iterasjonen har jeg valgt å bygge det som en slags hyllest til gode gamle "hjemmesider" fra den gangen vi lagde dem helt for hånd, med et veldig minimalistisk design som skal bringe minner tilbake til 8-bit eraen. Nettstedet har også med vilje et dårlig menysystem slik at du kan gå deg vill i lenkene du finner i tekstene. </p>
 
-                <p>Jeg er født og oppvokst i Oslo. Tidlig <a href="gamingnow.html">datanerd og gamer</a> allerede på slutten av åttitallet.</p>
+                <h2>Hvordan har jeg laget denne digitale hagen?</h2>
+
+                <p>Jeg bruker Microsoft Visual Studio Code for å skrive HTML/CSS kode helt for hånd. Til å begynne med fikk jeg hjelp av AI-chatbot'en Le Chat fra Mistral AI til å bygge CSS koden, men etter at jeg satt opp Copilot for Github direkte i Visual Studio Code, så nå bruker jeg primært Copilot om jeg trenger hjelp til noe kode. Copilot er også god til å komme med forslag til kodeforbedringer til kode jeg har skrevet.</p> 
+
+                <p>Jeg overvåker brukeropplevelsen til hagen med <a href="DEM.html">Grafana Frontend Observability</a>.</p>
                 
-                <p>Etter pliktåret i forsvaret tok jeg Polyteknisk Høgskole og kom raskt ut i arbeid som omreisende konsulent. Siden har jeg hatt en god del forskjellige jobber og fritidsprosjekter, primært innenfor IT-bransjen. Jeg har også vært skribent, blogger og kommentator i forskjellige medier, primært rundt mobilteknologi. Jeg har også vært styreleder og nestleder <a href="borettslag.html">i flere borettlag</a> opp igjennom årene.</p>
+                <p>Domenet brukes også til <a href="verifisering.html">verifisering av eierskap til brukernavn</a> på tjenester som Mastodon og Bluesky.</p>
 
-                <p>Noen stikkord om meg:</p>
-
-                <ul>
-                    <li><a href="o11y.html">Senior Manager i Sopra Steria</a></li>
-                    <li><a href="mortensrud.html">Styremedlem i Mortensrud Festival</a></li>
-                    <li><a href="mortensrud.html">Styremedlem i Mortensrud Skolekorps</a></li>
-                    <li><a href="sykkel.html">Helårssyklist</a></li>
-                </ul>
                 
-                <p><br />Jeg drifter også Mastodon-instansen <a href="mikrobloggen.html">Mikrobloggen.no</a> som et fritidsprosjekt på vegne av <a href="topdogs.html">TopDogs Sosietetsforening</a>. Det er også <a href="https://mikrobloggen.no/@gauteweb">her du vil finne meg</a> mest aktiv med nesten daglige oppdateringer.</p>
-
-                <p>Denne nettsiden er <a href="hvorfor.html">skrevet helt for hånd</a> og den brukes også til <a href="verifisering.html">verifisering av eierskap til brukernavn</a> på tjenester som Mastodon og Bluesky.</p>
-
-                <p><a href="sitemap.html">Sjekk sidekartet</a>!</p>
-                
+                <p><a href="/">Tilbake...</a></p>
                 
             </section>
         </main>

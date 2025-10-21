@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Sykle i fylla?</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="Har du lov til å sykle i fylla? Her finner du svaret!">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sykle i fylla?" />
+    <meta property="og:description" content="Har du lov til å sykle i fylla? Her finner du svaret!" />
+    <meta property="og:image" content="https://gauteweb.net/images/sykkelvin.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/sykkelfylla.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+        <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
+
+</head>
+<body>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+      
+        <main>
+            <section>
+                <p>Har du lov til å sykle i fylla? Nja... er svaret på det, men først må vi skille på elsparkesykkel og (el)sykkel.</p> 
+                
+                <h2>Elsparkesykkel</h2>
+                <p>Den 15. juni 2022 ble "småelektriske kjøretøy" omklassifisert fra å være "sykkel" til å være "motorvogn". Det har i praksis to konsekvenser. Du må ha ansvarsforsikring for å kjøre den, og det er samme promilleregel på elsparkesykkel som for bil og motorsykkel, altså 0,2 promille. I praksis betyr det at du ikke kan ta deg en øl for så å leie en elsparkesykkel og kjøre hjem.</p>
+
+                <h2>(el)Sykkel</h2>
+                <p>For (el)sykkel derimot så er det andre regler. Elektriske sykler er fortsatt definert som en sykkel. Ergo gjelder ikke noe av det jeg akkurat beskrev over for oss som sykler på en elsykkel, men hva gjelder egentlig når det kommer til å sykle etter å ha drukket alkohol?</p>
+
+                <img src="/images/sykkelvin.jpg" alt="Sykkel og vin">
+
+                <p><br />Det er ingen absolutt promillegrense for sykkel slik det er for "motorvogn". Ergo, du har i praksis lov til å sykle i påvirket tilstand. </p>
+                    
+                <p>...men, ja for det er et men her. <a href="https://lovdata.no/lov/1965-06-18-4/§21">Vegtrafikkloven § 21</a> åpner for en tolkning som gjør at politiet kan gripe inn om du er såpass påvirket at det er tydelig at du ikke burde sykle. Samme paragraf kan gjøre deg ansvarlig ved ulykker:</p>
+
+                <ul><li>Ingen må føre eller forsøke å føre kjøretøy når han er i en slik tilstand at han ikke kan anses skikket til å kjøre på trygg måte, hva enten dette har sin årsak i at han er påvirket av alkohol eller annet berusende eller bedøvende middel, eller i at han er syk, svekket, sliten eller trett, eller skyldes andre omstendigheter.</li></ul>
+
+                <p><br />Sykkel inkluderes nemlig inn under begrepet "kjøretøy". Du risikerer ikke å miste førerkortet, men du kan bli bedt av politiet om å sette fra deg sykkelen om du fremstår tydelig påvirket og du kan bli holdt rettslig og økonomisk ansvarlig om du skader personer eller lager materielle skader.</p>
+
+                <h2>Konklusjon</h2>
+                <p>Nei, du bør ikke sykle i fylla. En grei tommelfinger-regel kan være:</p>
+                <ul><li>På elsparkesykkel; ikke kjør når du har drukket, overhodet!</li>
+                <li>På (el)sykkel: Ikke sykle om du føler deg beruset eller svekket.</li></ul>
+
+                <p><br /><a href="sykkel.html">Tilbake...</a></p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://mikrobloggen.no/@gauteweb">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

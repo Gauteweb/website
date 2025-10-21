@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Mikrobloggen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="Mikrobloggen er en liten norsk Mastodon-instans i det store fødiverset.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mikrobloggen.no" />
+    <meta property="og:description" content="Mikrobloggen er en liten norsk Mastodon-instans i det store fødiverset." />
+    <meta property="og:image" content="https://gauteweb.net/images/Mikrobloggen_city.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/mikrobloggen.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+        <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+        <main>
+            <section>
+                <p>Mikrobloggen er en <a href="fediverse.html">Mastodon-instans i fødiverset</a>, eid av <a href="topdogs.html">TopDogs Sosietetsforening</a> og driftet av undertegnede.</p>
+
+                <img src="/images/kafe_mikrobloggen.jpg" alt="Mennesker utenfor en kafe som heter Mikrobloggen.">
+
+                <p><br />I motsetning til de fleste Mastodon-instanser der ute så må du betale for å være med på vår instans. Rettere sagt, instansen er kun for <a href="topdogs.html">medlemmer av foreningen</a> så for å være med på instansen må du betale en liten årlig medlemsavgift som kun er ment for å dekke de løpende utgiftene til instansen.</p>
+
+                <h2>Hvorfor bli medlem?</h2>
+
+                <p>Ønsker du å være på en norsk instans, der reglene er så få som mulig og settes av et valgt organ av medlemmer, hvor du ikke risikerer å bli stengt ute av en vilkårlig moderator og er del av en gjeng som har en felles interesse i å ha en aktiv instans fri for reklame, algoritmer og overvåkning? De som synes dette høres fristende ut, kan være med og dele kostnadene ved å melde seg inn i foreningen.</p>
+
+                <p>Mikrobloggen tilbyr også <a href="https://mikrobloggen.no/@manny/113744094493168314">en rekke nyhetsbot'er du kan følge om du vil</a>, disse kan følges av alle som har en konto ett eller annet sted i <a href="fediverse.html">fødiverset</a>. Du kan selvfølgelig også <a href="https://mikrobloggen.no/@gauteweb">følge meg</a> eller andre brukere på Mikrobloggen fra hvilken som helst annen tjeneste i fødiverset.</p> 
+
+                <p>Her er mine tre favoritt-bot'er:</p>
+
+                <p><a href="https://mikrobloggen.no/@nyheter">Avisrunden</a></p>
+                <img src="/images/nyheter_bot.jpg" alt="avataren til Avisrunden">
+
+                <p>Denne bot'en henter meningsbærende nyheter fra norske nettaviser men uten de mest tabloide sakene, samlet i en feed. Vi snakker altså ikke en flom av "siste nytt", men kommentarer, kronikker og lignende. Samt innhold fra noen litt mindre nettaviser. </p>
+
+                <p><a href="https://mikrobloggen.no/@stortinget">Stortinget</a></p>
+                <img src="/images/stortinget_bot.jpg" alt="avataren til Stortinget">
+
+                <p>Stortinget bot'en poster alle nye lov-vedtak, stortings-vedtak, skriftlige svar på interpellasjoner, pressemeldinger fra stortinget samt svar fra regjeringen på spørsmål fra stortingsrepresentanter.</p>
+
+                <p><a href="https://mikrobloggen.no/@krimloggen">Krimloggen</a></p>
+                <img src="/images/krimloggen.jpg" alt="avataren til Krimloggen">
+                <p>Krimloggen viser meldinger fra Politiloggen fra hele landet relatert til litt mer alvorlig kriminalitet filtrert basert på kategoriene voldshendelser, skadeverk, innbrudd og tyveri.</p>
+                 
+                <h2>100% Europeisk sosialt medie</h2>
+                <p>Mikrobloggen er forøvrig så <a href="europeisk.html">europeisk</a> som det kan bli. Nettstedet er som sagt eid av en norsk ideel organisasjon, drevet av tysk programvare (Mastodon), driftet av et portugisisk selskap (Masto.host) med servere lokalisert i Frankrike (OVH).<p>
+                
+                <p>Du kan lese mer om hvordan Mikrobloggen er satt opp og hvordan <a href="https://mikrobloggen.no/about">du kan bli med på instansen</a> vår ved å gå til <a href="https://mikrobloggen.no/about">mikrobloggen.no</a>, og er du på <a href="fediverse.html">fødiverset</a> ett eller annet sted, så er det veldig hyggelig om <a href="https://mikrobloggen.no/@gauteweb">du vil følge meg</a>.</p>
+                
+                <p><a href="/">Tilbake...</a></p>
+
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://mikrobloggen.no/@gauteweb">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

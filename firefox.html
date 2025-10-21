@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Firefox oppsett</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="Firefox er min prefererte nettleser og her er hvordan jeg har satt den opp.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Firefox-oppsett" />
+    <meta property="og:description" content="Firefox er min prefererte nettleser og her er hvordan jeg har satt den opp." />
+    <meta property="og:image" content="https://gauteweb.net/images/Firefox_lady.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/firefox.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+    <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+        <main>
+            <section>
+            <p>Jeg sverget i mange år til <a href="europeisk.html">Vivaldi som min nettleser</a>, men siden nåværende arbeidsgiver ikke tillater Vivaldi på jobb-PC og jeg liker å ha samme nettleser på alle enheter for synkronisering, så gikk jeg tilbake til gode gamle Firefox.</p>
+
+            <p>Firefox har fått mye tyn de siste årene for valgende Mozilla har gjort under utviklingen. Det meste synes jeg er litt urettferdig kritikk. De må for eksempel tjene penger og samarbeid med Google er en naturlig måte å gjøre det på samtidig som vi brukere enkelt kan velge å bytte bort Google med for eksempel <a href="europeisk.html">europeiske alternativer som Qwant eller Startpage</a>. AI-satsningen deres har også fått mye tyn, selv om det i praksis er en ganske genialt enkel opt-in integrasjon med den AI-chatbot'en du måtte foretrekke.</p>
+
+            <h2>Her er mitt oppsett</h2>
+            <p>Oppsettet mitt varierer litt fra jobb-PC, mobil og hjemme-PC'ene, så jeg tar bare de viktigste høydepunktene som jeg har satt opp på tvers.</p>
+
+            <img src="/images/firefox_setup.jpg" alt="Mitt Firefox oppsett">
+
+            <p><br />Det finnes en hel drøss med forskjellige utvidelser til Firefox for å blokkere reklamer og trackere. Jeg ønsket primært å blokkere trackere, jeg tenker at nettaviser og lignende må få leve av annonser så lenge de ikke sporer meg. Valget falt på <a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/">Privacy Badger</a> fordi jeg liker konseptet deres med fokus på trackere, ikke å sperre for annonser, automatisk læring istedet for manuell bruker-registrering, at den også fungerer på mobil-klientene til Firefox og at EFF står bak prosjektet.</p>
+
+            <p><a href="https://addons.mozilla.org/en-US/firefox/addon/webpage-sidebar/">Webpage Sidebar</a> er en enkel utvidelse som lar deg sette opp hvilke URL'er du vil som sidebars. Det fungerer dog best på sider som har et "mobil-grensesnitt". Jeg har bruker den primært til <a href="mikrobloggen.html">Mikrobloggen</a>.</p>
+
+            <p>Mens vi er inne på <a href="fediverse.html">desentraliserte sosiale medier</a>, så har jeg også installert utvidelsen <a href="https://addons.mozilla.org/en-US/firefox/addon/mastodon-share-for-browser/">Mastodon Share</a> som lett lar meg publisere en post med lenke til nettsiden jeg er på til Mikrobloggen.</p>
+
+            <p>Siden arbeidsgiver har en policy som gjør at vi ikke kan lagre passord i nettleseren, så bruker jeg også KeePass XC til passordlagring og dermed også utvidelsen til <a href="https://addons.mozilla.org/nn-NO/firefox/addon/keepassxc-browser/">KeePass XC</a>. Litt tungvindt siden denne plugin'en ikke finnes til mobilklienten til Firefox, men antagelig veldig sikkert...</p>
+
+            <p>Jeg liker den franske søkemotoren Qwant, og når du går på <a href="https://www.qwant.com/">Qwant.com</a> første gang så vil Firefox foreslå å installere en utvidelse som i praksis bare setter opp Qwant som standard søkemotor.</p>
+
+            <h2>AI integrasjon</h2>
+
+            <p>Tilslutt vil jeg si litt om AI-integrasjonen Firefox har utviklet siden dette kanskje er det de har fått mest tyn for og mistet endel brukere på grunn av. Integrasjonen er opt-in og veldig enkel, kritikken er i mine øyne bare en storm i vannglass.</p>
+
+            <p>Så hva går integrasjonen ut på? Jo, idet du begynner å bruke en AI chatbot, så vil Firefox spørre om det er den du ønsker at Firefox skal bruke som standard. Når du har valgt en AI chatbot så vil den dukke opp i sidebaren til Firefox og når du merker noe tekst på en nettside så vil det komme opp en popup-meny som lar deg bruke chatboten til å analysere det du har markert, om du ønsker det.</p>
+
+            <p>Personlig har jeg satt opp Firefox til å bruke Le Chat fra Mistral AI og jeg er veldig fornøyd med hvordan dette fungerer.</p>
+
+            <h2>Firefox på mobil</h2>
+            
+            <p>På mobil flate kan man også installere plugins og tilpasse oppsettet etter egne ønsker, men foreløpig finnes det ikke så mange nyttige utvidelser som er tilgjengelig på mobil flate.</p>
+
+            <img src="/images/Firefox_lady.jpg" alt="En animert kvinnelig rødrev som holder i en mobiltelefon">
+
+            <p><br />Utvidelsene jeg bruker for tiden er <a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/">Privacy Badger</a> og <a href="https://addons.mozilla.org/nn-NO/firefox/addon/qrcode/">QR Code for Firefox</a>. Er det en ting jeg virkelig savner fra Vivaldi så er det bedre fanehåndtering på mobile enheter og fargetemaer, utenom de to tingene fungerer mobilklienten veldig bra.</p>
+
+            <h2>...men Firefox er jo amerikansk!?</h2>
+
+            <p>OK, så jeg har profilert <a href="europeisk.html">europeiske alternativer</a> ganske hardt en stund, så hvorfor velger jeg en amerikansk nettleser? Riktignok har Mozilla hovedkontor i California, men utviklingen skjer både ved kontorene deres i Canada og Frankrike og siden Firefox er et åpen kildekodeprosjekt så bidrar i praksis utviklere og brukere over hele verden til prosjektet.</p>
+                
+            <p>Så har vi det faktum at Mozilla er en ideel organisasjon og at per dags dato er Gecko (rendering-motoren i Firefox) det eneste reelle åpen kildekode alternativet til Google-sponsede Blink (renderingmotoren i nesten alle andre nettlesere). <a href="https://chat.mistral.ai/chat/81cdf3c4-d552-4b4d-ab9e-f29935fa1aea">Dette synes jeg faktisk er viktigere</a> enn at Mozilla Foundation tilfeldigvis har hovedkontor i USA.</p>
+
+            <p>Kort oppsummert: Firefox med Privacy Badger, Qwant og Le Chat = <3</p>
+
+                <p><a href="/">Tilbake...</a></p>
+                
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://mikrobloggen.no/@gauteweb">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

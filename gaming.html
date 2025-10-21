@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Gaming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="Jeg går vel under kategoriene causal gamer og single player. Her finner du lenker til spill-relatert innhold jeg produserer.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mitt forhold til gaming" />
+    <meta property="og:description" content="Jeg går vel under kategoriene causal gamer og single player." />
+    <meta property="og:image" content="https://gauteweb.net/images/sofa_fardatter.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/gaming.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+    <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+        <main>
+            <section>
+            <p>Jeg går vel under kategoriene "causal gamer" og "single player". Altså jeg er glad i å spille, men ikke spesielt god, også liker jeg best å spille alene. Jeg går under kallenavnet "Gauteweb" på spillrelaterte tjenester.</p>
+
+            <h2>Utstyr</h2>
+            <p>Jeg har helt siden jeg fikk min første Nintendo Game & Watch på åttitallet hatt en forkjærlighet for håndholdte konsoller. For tiden spiller jeg primært på en <a href="https://www.spillnorge.no/blog/lenovo-legion-go-s-steam-os">Lenovo Legion Go S, Steam OS utgave</a>.</p> 
+
+            <img src="/images/LenovoLegionGoS.jpg" alt="Min Lenovo Legion Go S (Steam OS versjonen).">
+
+            <p><br />I huset idag har vi også Nintendo Switch og en <a href="https://www.spillnorge.no/blog/omtale-av-steam-deck-oled-1tb">Steam Deck</a>.</p> 
+            
+            <p>Jeg har også en gaming-PC som jeg har bygget selv, men min eldste datter okkuperer stadig PC'en for å spille Wuthering Waves og Stardew Valley, så det blir mest håndholdt gaming i sofakroken på meg.</p>
+
+            <h2>Twitch og Discord</h2>
+            <p>Jeg har en <a href="https://www.twitch.tv/gauteweb">Twitch kanal</a> som jeg ikke har brukt på lang tid og en <a href="https://discord.gg/sAE5eX4V2V">Discord-server</a> som det heller ikke er særlig aktivitet på for tiden.</p>
+            
+            <h2>SpillNorge</h2>
+            <p>SpillNorge er et spennende initiativ en gruppe har tatt for å samle gamere og spillutviklere i Norge. <a href="https://www.spillnorge.no/profile/gauteweb">Jeg skriver av og til noen bloggposter der</a>.</p>
+            
+            <h2>#GauteSpiller</h2>
+            <p>Den enkleste måten å se og følge med på hva jeg spiller for tiden er nok å følge <a href="https://mikrobloggen.no/tags/GauteSpiller">emneknaggen #GauteSpiller</a> i fødiverset. Den kan også følges som en RSS-feed.</p>
+
+            <p><a href="gamingnow.html">Tilbake...</a></p>
+                
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://mikrobloggen.no/@gauteweb">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

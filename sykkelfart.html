@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Hvor raskt går en tråsykkel?</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="Hvor raskt går en tråsykkel?">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hvor raskt går en tråsykkel?" />
+    <meta property="og:description" content="Du har sikkert lest det før, en ulykke med syklist og bil og det skrives at syklisten hadde høy hastighet eller full fart, men hvor for går egentlig en tråsykkel?" />
+    <meta property="og:image" content="https://gauteweb.net/images/syklister_borg.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/sykkelfart.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+        <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
+
+</head>
+<body>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+      
+        <main>
+            <section>
+                <p>Du har sikkert lest det før, en ulykke med syklist og bil og det skrives at syklisten hadde "høy hastighet" eller "full fart", men hvor for går egentlig en tråsykkel?</p>
+
+                <p>Denne tvitringen fra Trondheims-politiet er ett klassisk eksempel der man bare tar vitners beskrivelse av "stor fart" for god fisk og nærmest flytter skylden for ulykken over fra bilisten som ikke overholdt vikeplikten og over på syklisten:</p>
+
+                <p>
+                    <blockquote class="twitter-tweet" data-theme="dark"><p lang="no" dir="ltr"><a href="https://twitter.com/hashtag/Trondheim?src=hash&amp;ref_src=twsrc%5Etfw">#Trondheim</a>:<br>En bilfører som har rygget ut fra ei oppkjørsel, og en syklist som kom syklende langs veien. Syklisten traff bakenden på bilen. Vedkommende er tatt med fra stedet av helse. Vitner sier at sykkel hadde stor fart, samt den har dårlige bremser. Ikke beslag av førerkort. <a href="https://t.co/x1Loia8E7c">https://t.co/x1Loia8E7c</a></p>&mdash; Politiet i Trøndelag (@PolitiTrondelag) <a href="https://twitter.com/PolitiTrondelag/status/1318910830201667586?ref_src=twsrc%5Etfw">October 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </p>
+
+                <p>...men hvor fort klarer egentlig en syklist å sykle? Her i Norge er 30 km/t minste fartsgrense på offentlige veier, de fleste småveier der syklister stort sett ferdes har fra 30 til 60 km/t som fartsgrense.</p>
+
+                <p>Ifølge en <a href="https://samferdsel.toi.no/forskning/sa-fort-sykler-folk-i-oslo-article33490-2205.html">undersøkelse utført av Trafikkøkonomisk Institutt</a> er gjennomsnittsfarten for alle sykkelturer med vanlig sykkel er 16,3 km/t. Reiser til og fra jobb har en gjennomsnittsfart på 19,4 km/t, mens treningsturer har en gjennomsnittsfart på 19,9 km/t. Hastigheten for øvrige formål er ca. 15,5 km/t.</p>
+
+                <p>Altså vesentlig saktere enn fartsgrensen og andre kjøretøy på veien.</p>
+
+                <h2>Men hva med topphastigheten?</h2>
+
+                <p>Denne undersøkelsen fra TØI sier dog ingenting om topphastigheter. Ifølge <a href="https://www.sciencedirect.com/science/article/pii/S0925753515001976">en tysk undersøkelse</a> hadde vanlige syklister på det meste 22 kilometer i timen på turene som ble målt i undersøkelsen. Elsyklistene med sykler hastighetsbegrenset til 25 km/t med assistanse oppnådde 31 km/t. Jeg antar at dette er på flatmark da man selvfølgelig oppnår noe større hastigheter i nedoverbakke.</p>
+
+                <p>TØI har forøvrig også gjort <a href="https://samferdsel.toi.no/forskning/full-fart-ned-bratt-bakke-hvis-separat-sykkelvei-article34180-2205.html">en undersøkelse på hvor fort syklister sykler i nedoverbakker</a>. Denne undersøkelsen viser at i bratte nedoverbakker har syklister i snitt en hastighet på 20 km/t. Det varierer litt i forhold til hvor bratt bakken er, hvor svingete og om veien deles med bilister eller fotgjengere. Det aller raskeste er når syklistene sykler på en bratt nedoverbakke dedikert for syklister, da har de en gjennomsnittlig hastighet på 26 km/t.</p>
+
+                <p>Uansett stemmer ganske bra med min elsykkel og mine erfaringer på veien.</p>
+
+                <p>Jeg har en elsykkel som kutter assistansen ved ca 25 km/t, slik det er lovpålagt i Norge. Etter det klarer jeg å skvise 4-5 km/t til ut av sykkelen med egen muskelkraft (alle elsykler har speedometer, så dette kan jeg se) og ender med en topphastighet på flata på ca. 30 km/t.  I lange nedoverbakker (som for eksempel Kongsveien) klarer jeg å oppnå en maksimal hastighet rundt 45 km/t bare ved å trille da jeg ikke har tunge nok gir til å øke hastigheten noe over 40 km/t.</p>
+
+                <p>Selv om elsykler altså har en teoretisk topphastighet opp rundt 30 km/t så er min opplevelse på veien at jeg ofte sykler forbi andre elsyklister, så flertallet er ikke i nærheten av 30 km/t sånn normalt sett, noe som stemmer bra med undersøkelsen fra TØI.</p>
+
+                <p>På flata hender det en sjelden gang at en landeveis-syklist (du vet de med smale hjul, bukkehorn og kondomdress) klarer å sykle forbi meg på flata, men de kan umulig ha mer en 5-6 km/t mer enn meg for det går ikke så fort i forbikjøringen. Samme i nedoverbakker, da sklir landeveissyklistene ofte forbi meg, men ikke veldig mye raskere.</p>
+
+                <img src="/images/syklister_borg.jpg" alt="To syklister som sykler nedover en vei fra et stort slott">
+
+                <h2><br />Med vitnene sa "stor fart"...</h2>
+
+                <p>Så da har vi noen mulige årsaker til at syklister i ulykker ofte hadde en udokumentert "høy hastighet".<br /></p>
+
+                <ul><li>De ytterst få landeveissyklistene som virkelig gønner på er overrepresentert ved ulykker. Jeg har ikke funnet noe dokumentasjon som skulle tilsi det. Selv om det skulle være tilfellet så kan de umulig være over fartsgrensen med mindre det er 30 km/t fartsgrense på ulykkestedet, eller er i en lang og bratt nedoverbakke.</li>
+                <li>Vitnene synes det ser ut som om syklisten har høy fart fordi det kan se fort ut sammenlignet med en rolig "søndagstur" som kanskje er det de fleste bruker sykkelen sin til. Altså at begrepet "stor fart" er høyst subjektivt og ikke har noe med trafikkfaglige vurderinger.</li>
+                <li>At bilisten lente seg på den sterkestes rett og regnet med at syklisten skulle stoppe. Da syklisten ikke klarte å stoppe bruker bilisten "syklisten kom i stor fart" som en unnskyldning for hvorfor bilisten selv ikke stoppet.</li></ul>
+
+                <h2><br />Konklusjon</h2>
+
+                <p>Konklusjonen må være ganske enkel: Ja, for fotgjengere så oppleves nok en sykkel som kommer "susende" i mellom 20-30 km/t som "høy fart", men ren trafikkmessig som ett kjøretøy i veibanen, så er det svært lite sannsynlig at syklisten bryter noen fartsgrenser eller sykler uaktsomt fort i forhold til en bil når det oppstår en situasjon.</p>
+
+                <h2>Kom deg ut i veien!</h2>
+                <p>Hensikten med denne artikkelen var å se på farten syklister holder i forhold til andre kjøretøy. Jeg vet mange syklister insisterer på å sykle på fortau og i fotgjengeroverganger og det kan selvfølgelig oppleves som en fare for fotgjengere.</p> 
+                    
+                <p>Personlig vil jeg oppfordre alle syklister til å slutte å sykle på fortauet som en hovedregel og holde seg ute i veibanen sammen med andre kjøretøy så langt det er mulig. </p>
+
+                <p>Noe av det dummeste jeg ser, er elsparkesyklister eller syklister som bruker fortauet når det er ett flott rødt sykkefelt bare 1 meter til siden for dem.</p>
+
+                <p>Jo flere syklister vi får ut i veibanen/sykkelfeltet, jo tryggere blir fortauet og jo mer vant blir bilistene til å måtte forholde seg til syklister. Alle vinner på det, unntatt kanskje de mest sykkel-hatende bilistene.</p>
+
+                <p><a href="sykkel.html">Tilbake...</a></p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://mikrobloggen.no/@gauteweb">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

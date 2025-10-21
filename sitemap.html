@@ -23,6 +23,50 @@
     <meta property="og:author_name" content="Gaute Holmin">
     <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
 
+    <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
 
 </head>
 <body>
@@ -42,27 +86,23 @@
       
         <main>
             <section>
-                <p>Denne nettsiden har ingen søkefunksjon, så derfor har jeg laget et veldig enkelt sidekart her:</p>
+                <p>Denne digitale hagen har ingen søkefunksjon, så derfor har jeg laget et veldig enkelt sidekart for å navigere seg rundt i hagen:</p>
 
                 <ul>
                     <li><a href="/">Om Gaute</a>
                         <ul>
-                            <li><a href="firefox.html">Mitt Firefox-oppsett</a></li>
-                            <li><a href="mobil.html">Mitt mobiloppsett</a></li>
-                            <li><a href="gamingnow.html">#GauteSpiller</a>
-                                <ul>
-                                    <li><a href="steamdeck.html">Håndholdt gaming</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="verifisering.html">Verifisering av brukernavn</a></li>
+                            <li><a href="mortensrud.html">Mortensrud</a></li>
+                            <li><a href="gamingnow.html">#GauteSpiller</a></li>
                         </ul>
+                    <li><a href="verifisering.html">Verifisering av brukernavn</a></li>
                     </li>
-                    <li><a href="o11y.html">Hva er Observability (O11y)?</a></li>
+                    <li><a href="borettslag.html">Styre og stell i borettslag</a></li>
+                    <lI><a href="hvorfor.html">Hva er en Digital Hage?</a></lI>
+                    <li><a href="o11y.html">Hva er Observability (O11y)?</a>
+                        <ul><li><a href="DEM.html">Digital Experience Monitoring</a></li></ul>
+                    </li>
                     <li><a href="europeisk.html">Europeiske Alternativer</a>
-                        <ul>
-                            <li><a href="techbros.html">Tech Bros i det Hvite Hus</a></li>
-                        </ul>
-                    </li>
+                        <ul><li><a href="techbros.html">Tech Bros, hva er greia?</a></li></ul></li>
                     <li><a href="fediverse.html">Fødiverset</a>
                         <ul>
                             <li><a href="mikrobloggen.html">Mikrobloggen</a>
@@ -74,7 +114,7 @@
                             <li><a href="feedlybot.html">Mastodon-bot basert på Feedly</a></li>
                         </ul>
                     </li>
-                    <li><a href="bluesky.html">Bluesky</a></li>
+                    <li><a href="bluesky.html">Hvorfor ikke Bluesky?</a></li>
                     <li><a href="elbil.html">Elbil og lading</a></li>
                     <li><a href="sykkel.html">Sykle til jobb</a>
                         <ul>

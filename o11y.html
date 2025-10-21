@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Gauteweb.net -> Hva er Observability?</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Le Chat and Visual Studio Code">
+    <link rel="icon" href="/images/gauteweb_head.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminalstyle.css" />
+    <link href="https://mikrobloggen.no/@gauteweb" rel="me">
+
+    <!--SEO-->
+    <meta name="author" content="Gaute Holmin" >
+    <meta name="fediverse:creator" content="@gauteweb@mikrobloggen.no">
+    <meta name="description" content="Hva er Observability? Her prøver jeg meg på en tolkning slik jeg ser det.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hva er Observability?" />
+    <meta property="og:description" content="Spør du fem Observability-konsulenter hva det er, er sjansen for at du får ti forskjellige svar stor. Her er mitt forsøk på en forklaring." />
+    <meta property="og:image" content="https://gauteweb.net/images/o11y.jpg" />
+    <meta property="og:url" content="https://gauteweb.net/o11y.html" />
+    <meta property="og:author_name" content="Gaute Holmin">
+    <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
+
+    <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div id="navigasjon"></div>
+
+            <script>
+                fetch('navigasjon.shtml')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navigasjon').innerHTML = data;
+                    });
+            </script>
+        </header>
+        <main>
+            <section>
+            
+            <p>Observability (O11y) er et av de nye hype-ordene innen IT, men hva er det egentlig? Det troner nesten øverst oppe på hype-bølgen og alle definerer det litt forskjellig. Jeg har i praksis jobbet med fagfeltet som idag kalles Observabiliity siden 2003 og har muligens en litt annen tilnærming enn mange andre.</p> 
+
+            <h2>Hvorfor "O11y"</h2>
+
+            <p>Jeg er ikke helt glad i forkortelsen "O11y" skal jeg innrømme, men den har begynt å feste seg i bransjen. Det er rett og slett en forkortelse av ordet Observability, som er et ord som starter med "O" og slutter med "y", mellom der er det 11 bokstaver...</p>
+            
+            <img src="/images/o11y.jpg" alt="En dame som holder et hvitt ark som det står o11y på" >
+
+            <p><br />Du kan <a href="https://chat.mistral.ai/chat/78a01a59-56d5-4293-9f2a-e930151e153a">spørre en AI tjeneste hva Observability</a> er og få en veldig god teknisk forklaring, så jeg skal ikke begi meg ut på å konkurrere med dem, men heller skrive litt om jeg har erfart at er et par viktige suksessfaktorer for å lykkes med å vise verdi for hele virksomheten.</p>
+
+            <p>Jeg var "Observability Manager" i det norske selskapet SuperOffice i fire år. Der bygget jeg Observability-området og endte opp med noe helt annet enn jeg hadde sett for meg da jeg startet. Det hele startet som et tradisjonelt Observability prosjekt; instrumentere kildekoden, finne områder i applikasjonen som oppførte seg rart, gav brukerne feilmeldinger, og så videre. Vi etablerte en "squad" med løsningsarkitekter og utviklere som annenhver uke satt seg sammen med meg og brukte Observability løsningen til å prioritere hva de skulle jobbe med relatert til teknisk forbedring av plattformen den neste sprinten.</p>
+
+            <p>En genistrek vi gjorde var at vi satt opp et dashboard  foran kontorene til ledelsen. Når det så var ting vi ikke syntes fikk nok prioritet til å fikses, så endret vi dette dashboardet til å fokusere på de områdene, vise med klare tall og kundenavn hvorfor det var viktig å fikse problem X eller Y. Dette dashboardet ble da stadig en møteplass der man diskuterte grafene og ble enige om at her måtte man prioritere...</p>
+
+            <img src="/images/superoffice.jpg" alt="Dashboard hos SuperOffice">
+
+            <p><br />Så etter et års tid begynte vi å få svært god kontroll på den tekniske kvaliteten til SuperOffice. Da begynte jeg å se meg om etter andre områder de enorme datamengdene vi hadde kunne brukes. Jeg så for eksempel at når vi lanserte en ny funksjon, så kunne jeg lage et dashboard som viste ikke bare om den nye funksjonen fungerte som den skulle, men også hvilke av SaaS kundene våre som tok den i bruk, hvor mange brukere hos hver kunde og om de fortsatte å bruke funksjonen. Dette gjorde at jeg etterhvert fikk faste statusmøter med alle mulige deler av organisasjonen, ikke bare utvikling og drift. Igjen var dette dahboardet i gangen viktig, jeg endret innholdet i dette etter hver sprint slik at vi viste både teknisk og bruksdata på skjermen, og diskusjonene med en kaffekopp i hånden gikk plutselig på tvers av interessegrupper i bedriften.</p>
+
+            <p>Vi investerte ikke i veldig dyre Observability-verktøy, vi baserte oss på Azure Application Insights med en god del definering av custom events, Power BI for presentasjonslag og noen API'er fra andre styringssystemer for å sammenstille tekniske data med forretningsdata. </p>
+
+            <p>Vi brukte også <a href="DEM.html">Digital Experience Monitoring</a> til å ha proaktive, simulerte sluttbrukermålinger på morgenkvisten hver eneste dag med Apica Synthetic Monitoring.</p>
+            
+            <p>Resultatet ble en løsning som gav verdi til hele organisasjonen, utvikling, drift, salg, marked og ikke minst som styringsverktøy til ledergruppa. Det viktigste var egentlig ikke verktøy-valgene vi gjorde, men prosessene vi etablerte og at vi fant et bredt bruksområde for det vi samlet inn av data slik at vi skapte verdi.</p>
+
+            <h2>Tre tips for veien videre</h2>
+
+            <p>Kanskje du ikke skal investere mye i Observability idag, eller i imorgen, men det er bare å forberede seg med en gang, så her er tre tips:</p>
+
+            <ul>
+                <li>Start smått med å sikre at dere bruker åpne nok verktøy for metrikker, hendelser og logger idag. <a href="DEM.html">Fokuser på sluttbrukermålinger!</a> Dere vil trenge dem rundt neste sving når Observability-verktøyene har landet etter den første hype-bølgen og blir obligatorisk hyllevare hos IT-avdelingen.</li>
+                <li>Når du har måledata, sett et ekstra fokus på forretningsverdi. Ikke la deg blende av verktøyleverandørenes eksempler på exception-logging og trege metodekall. Bruk operasjonelle data til å vise noe som gir verdi til forretningen, altså de som sitter på pengesekken.</li>
+                <li>Følg med på min <a href="https://mikrobloggen.no/@o11y">Observability-nyhetsbot på Mikrobloggen</a>. Det er mye gull i bloggposter fra de forskjellige verktøy-leverandørene så lenge du tar salgsbudskapene med en klype salt ;-)</li>
+            </ul>
+            
+            
+              <p><br /><a href="/">Tilbake...</a></p>  
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <a href="https://gauteholmin.no/">Gaute Holmin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

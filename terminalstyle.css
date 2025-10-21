@@ -1,0 +1,154 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0000C0;
+            color: #ffffff;
+            font-family: 'Kode Mono', monospace;
+            font-weight: 450; /* Standard vekt */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0rem;
+        }
+
+        .container-left {
+            max-width: 900px;
+            width: 100%;
+            margin-left: 10;
+            margin-right: auto;
+            padding: 0rem;
+        }
+
+        header, main, footer {
+            padding: 0.5rem 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)
+        }
+
+        /* Bilder uten skygge */
+        .no-shadow {
+            box-shadow: none !important;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            padding-inline-start: 40px;
+        }
+        
+        ol {
+            padding-inline-start: 40px;
+        }
+
+        a {
+            color: #FFD700; /* Lys gul farge */
+            font-weight: 700;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+            padding-bottom: 2px; /* Gir plass til understreken */
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #FFD700;
+            transition: width 0.3s ease;
+        }
+
+        a:hover {
+            font-weight: 700; /* Fete teksten ved hover */
+            color: #FFD700;
+        }
+
+        a:hover::after {
+            width: 100%; /* Animerer understreken fra venstre til høyre */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+        
+        .goog-te-banner-frame { 
+            display: none !important; 
+        }
+        body { 
+            position: static !important; 
+            top: 0px !important; 
+        }
+        .goog-logo-link { 
+            display: none !important; 
+        }
+        .goog-te-gadget { 
+            color: transparent !important; 
+        }
+        .responsive-iframe {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Set max width to 800 pixels */
+            margin-right: auto; /* Align to the left */
+            height: 100%;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+        .responsive-iframe iframe {
+            width: 100%;
+            height: 100%;
+            max-height: 450px; /* Set max height to 450 pixels */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        /* For WebKit-based browsers (Chrome, Safari, Opera) */
+        ::-webkit-scrollbar {
+            width: 12px; /* Bredden på scrollbar'en */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0000C0; /* Bakgrunnsfargen til scrollbar-sporet */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: white; /* Fargen på scrollbar-håndtaket */
+            border-radius: 10px; /* Avrundede hjørner */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ddd; /* Farge når du holder musen over scrollbar-håndtaket */
+        }
+
+        /* For Firefox */
+        * {
+            scrollbar-width: thin; /* Bredden på scrollbar'en */
+            scrollbar-color: white #0000C0; /* Farge på håndtaket og sporet */
+        }

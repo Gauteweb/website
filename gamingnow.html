@@ -17,11 +17,55 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Dette spiller jeg nå" />
     <meta property="og:description" content="Hvilke spill spiller jeg for tiden og hva er neste på listen over spill jeg skal spille?" />
-    <meta property="og:image" content="https://gauteweb.net/images/dark_goddess.jpg" />
+    <meta property="og:image" content="https://gauteweb.net/images/cyberpunksword.jpg" />
     <meta property="og:url" content="https://gauteweb.net/gamenow.html" />
     <meta property="og:author_name" content="Gaute Holmin">
     <meta property="og:author_url" content="https://mikrobloggen.no/@gauteweb">
 
+    <!-- Grafana Frontend O11y -->
+    <script>
+  (function () {
+    var webSdkScript = document.createElement("script");
+
+    // fetch the latest 1.x.x version of the Web-SDK from the CDN
+    webSdkScript.src =
+      "https://unpkg.com/@grafana/faro-web-sdk@1/dist/bundle/faro-web-sdk.iife.js";
+
+    webSdkScript.onload = () => {
+      window.GrafanaFaroWebSdk.initializeFaro({
+        url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/586de9c9aadd2a69416bd666304a222f",
+        app: {
+          name: "Gauteweb.net",
+          version: "1.0.0",
+          environment: "production",
+        },
+        
+      });
+
+
+      // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+      // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+      var webTracingScript = document.createElement("script");
+
+      // fetch the latest 1.x.x version of the Web Tracing package from the CDN
+      webTracingScript.src =
+        "https://unpkg.com/@grafana/faro-web-tracing@1/dist/bundle/faro-web-tracing.iife.js";
+
+      // Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+      webTracingScript.onload = () => {
+        window.GrafanaFaroWebSdk.faro.instrumentations.add(
+          new window.GrafanaFaroWebTracing.TracingInstrumentation()
+        );
+      };
+
+      // Append the Web Tracing script script tag to the HTML page
+      document.head.appendChild(webTracingScript);
+    };
+
+    // Append the Web-SDK script script tag to the HTML page
+    document.head.appendChild(webSdkScript);
+  })();
+</script>
 
 </head>
 <body>
@@ -41,35 +85,30 @@
         <main>
             <section>
 
-            <p><em>Sist oppdatert: 20.08 - 2025</em></p>
+            <p><em>Sist oppdatert: 20.10 - 2025</em></p>
 
-            <p>Her tenkte jeg å liste opp hvilke spill jeg er i gang med og <a href="steamdeck.html">spiller jevnlig</a>, men siden jeg er veldig glad i Steam-salg, så har jeg også en liste over spill jeg har kjøpt, men ikke kommet meg igang med ennå...</p>
+            <p>Her tenkte jeg å liste opp hvilke spill jeg er i gang med og spiller jevnlig, men siden jeg er veldig glad i Steam-salg, så har jeg også en liste over spill jeg har kjøpt, men ikke kommet meg igang med ennå... samt noen spill som jeg ikke er ferdig med, men har lagt midlertidig på hylla.</p>
 
-            <p>Siden jeg ikke har sååå mye tid til å spille, så finnes det en utømmelig liste over spill jeg har lyst til å spille. Kombinert med at jeg ikke liker å betale altfor mye for spill, så er det meste her spill som enten er indie-spill, eller noen år gamle som jeg har kjøpt på tilbud.</p>
+            <img src="/images/LegionGoS_HadesII.jpg" alt="Min Lenovo Legion Go S med røde tommelgrep">
 
-            <img src="/images/flintlock.jpg" alt="Protagonisten Nor Vanek og guden Enki i aksjon.">
+            <p><br />Jeg spiller primært på min <a href="https://www.spillnorge.no/blog/lenovo-legion-go-s-steam-os">Lenovo Legion Go S (Steam OS utgaven)</a> i sofakroken, men også av og til på min hjemmebygde gaming-rigg i kjelleren.</p>
+
+            <img src="/images/RDR2.jpg" alt ="Red Dead Redemption II">
 
             <h2><br />Spill jeg aktivt spiller for tiden</h2>
             <ul>
-                <li>Flintlock the siege of Dawn</li>
-                <li>Kena: Bridge of Spirits</li>
-                <li>No Rest for the wicked</li>
-                <li>Sifu</li>
+                <li>Red Dead Redemption II</li>
+                <li>Deliver at all cost</li>
+                <li>Pacific Drive</li>
+                <li>NFS Hot Pursuit Remastered</li>
+                <li>Laika: Aged Through Blood</li>
+
             </ul>
 
-            <p><br />Jeg akkurat kommet igang med No Rest for the Wicked igjen etter en lang pause, men spiller det kun på PC for det fantastiske kunstverket av en atmosfære og grafikk som dette spillet er kommer ikke til sin rett på en liten skjerm. Kena spiller jeg bare på Steam Deck for PC'en går varm når jeg spiller det. Flinklock er det spillet jeg spiller desidert mest akkurat nå.</p>
-
-
-            <h2>Spill jeg har kjøpt, men ikke kommet igang med</h2>
-
-            <ul>
-                <li>Lies of P</li>
-                <li>Shadow of war</li>
-                <li>Trine 5</li>
-            </ul>
-
+            <p><br />Av disse så er det Deliver at all cost og Red Dead Redemption II som jeg spiller mest for tiden, de andre er i ferd med å dette ned på lista under her.</p>
             
-            <br /><img src="/images/LaraCroft.jpg" alt="Lara Croft fra Rise of the Tomb Raider">
+            <img src="/images/chorus.jpg" alt="Nara og Forsaken.">
+            
 
             <h2><br />Spill jeg ønsker å ta opp igjen</h2>
 
@@ -77,44 +116,35 @@
 
             <ul>
                 <li>Chorus</li>
-                <li>The Precinct</li>
-                <li>The Rogue Prince of Persia</li>
-                <li>Rise of the Tomb Raider</li>
-                <li>Dredge</li>
+                <li>Lies of P</li>
+                <li>Kena: Bridge of Spirits</li>
+                <li>No Rest for the wicked</li>
+                <li>Hogwarts Legacy</li>
             </ul>
 
-            <p><br />Rise of the Tomb Raider, The Rogue Prince of Persia og Dredge er jeg nesten helt ferdige med, men sliter litt med motivasjonen til å bli helt ferdig. The Precinct ble brått mye vanskeligere, så mistet lit piffen der og, mens Chorus er et spill som gjør seg best på en stor PC-skjerm, så det blir litt lite tid til å spille det da jeg er mest på Steam Deck'en.</p>
+            <p><br />No Rest for the Wicked er et spill som gjør seg best på stor skjerm samtidig som det er veldig ressurskrevende, så jeg spiller det litt av og til når jeg har tid på PC'en. Lies of P har jeg egentlig aldri kommet igang med, men har ambisjoner om det...</p>
 
-            <img src="/images/deliver-at-all-costs.jpg" alt="Deliver at all Costs">
-
-            <h2><br />Spill som står høyt oppe på ønskelisten</h2>
-
-            <p>På Steam har jeg en lang ønskeliste hvor jeg stadig tar spill inn og ut av lista. Dette er de spillene jeg venter mest på at skal komme på et salg så jeg kan legge dem til samlingen min.</p>
-
-            <ul>
-                <li>South of Midnight</li>
-                <li>Deliver at all Costs</li>
-                <li>Spider-Man Remastered</li>
-                <li>Crimson Desert</li>
-
-            </ul>
+            <img src="/images/ThePrecinct.jpg" alt ="Skjermbilde fra The Precinct">
 
             <h2><br />Spill jeg har fullført</h2>
 
-            <p>Med rundt 40 år på baken som gamer så har jeg selvfølgelig fullført en god del spill, så her tenkte jeg bare å liste opp de siste spillene jeg faktisk har klart å fullføre hovedplottet på ihvertfall...</p>
+            <p>Jeg er notorisk dårlig på å fullføre spill, men med rundt 40 år på baken som gamer så har jeg selvfølgelig fullført endel spill, så her tenkte jeg bare å liste opp de siste spillene jeg faktisk har klart å fullføre hovedplottet på ihvertfall...</p>
 
             <ul>
+                <li>The Precinct</li>
                 <li>Ghost of Tsushima</li>
-                <li>High on Life</li>
                 <li>Shadow of the Tomb Raider</li>
+                <li>High on Life</li>
                 <li>Lara Croft</li>
                 <li>Stray</li>
             </ul>
 
-            <br /><img src="/images/cyberpunksword.jpg" alt="Kvinnelig protagonist med to glødende sverd som blir jaget av en gjeng cyberpunk-soldater.">
+            <p><br />Jeg skal innrømme at jeg stadig plukker opp The Precinct bare for å ta noen kveldsskift i uniform selv om jeg har spilt ferdig historien mens jeg drømmer om at de skal slippe noen DLC'er.</pi>
 
             <h2><br />#GauteSpiller</h2>
                 <p>Den enkleste måten å se og følge med på hva jeg spiller for tiden er nok å følge <a href="https://mikrobloggen.no/tags/GauteSpiller">emneknaggen #GauteSpiller</a> i fødiverset. Den kan også følges som en RSS-feed og alle innlegg viderepostes også på <a href="https://discord.gg/sAE5eX4V2V">Mikrobloggens Discord-server</a>.</p>
+
+                <p>Det hender også at jeg blogger litt på <a href="https://www.spillnorge.no/profile/gauteweb">nettsidene til SpillNorge</a>.</p>
 
                 <p><a href="/">Tilbake...</a></p>
                 
